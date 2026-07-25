@@ -1,5 +1,5 @@
 """
-Krea2 Prompt Director - Scene Graph
+VizClick - Scene Graph
 
 The Scene Graph is the central representation
 of creative intent.
