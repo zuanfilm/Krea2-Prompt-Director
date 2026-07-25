@@ -1,4 +1,4 @@
-Krea2 Vision
+Krea2-Prompt-Director Vision
 
 1. Purpose
 
@@ -8,6 +8,6 @@ Krea2 Vision
 
 4. Design Principles
 
-5. What Krea2 is not
+5. What Krea2-Prompt-Director is not
 
 6. Future Direction
