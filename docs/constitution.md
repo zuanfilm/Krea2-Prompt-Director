@@ -1,4 +1,3 @@
-🎬 Add Krea2 Design Constitution
 # Krea2 Prompt Director Architecture
 
 ## 1. Overview
