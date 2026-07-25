@@ -1,4 +1,4 @@
-# Krea2 Prompt Director Architecture
+# VizClick Architecture
 
 ## 1. Overview
 
@@ -109,7 +109,7 @@ ComfyUI
 
       +
       
-Krea2 Prompt Director
+VizClick
 
       ↓
 
