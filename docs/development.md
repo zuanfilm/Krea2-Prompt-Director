@@ -1,4 +1,4 @@
-# Krea2 Prompt Director Development Guidelines
+# VizClick Development Guidelines
 
 ## 1. Development Philosophy
 
@@ -34,7 +34,7 @@
 
 ## 1. Development Philosophy
 
-Krea2 Prompt Director is built around the principle:
+VizClick is built around the principle:
 
 "Build for the artist. Abstract the technology."
 
@@ -73,7 +73,7 @@ Git + GitHub
 ---------------------------------------------
 ## Python Standards
 
-Krea2-Prompt-Director follows:
+VizClick follows:
 
 - PEP 8 style guidelines
 - Type hints whenever possible
