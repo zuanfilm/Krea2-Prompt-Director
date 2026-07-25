@@ -136,13 +136,13 @@ Future compatibility
 
 Today:
 
-Krea2 → Krea
+Krea2
 
 Tomorrow:
 
-Krea2 → Flux
+Krea2 → Flux3
 Krea2 → Qwen Image
-Krea2 → SDXL
+Krea2 → Ideogram
 Krea2 → Video Models
 Krea2 → 3D Tools
 
