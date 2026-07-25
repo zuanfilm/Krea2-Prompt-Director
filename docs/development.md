@@ -1,4 +1,3 @@
-🛠️ Add Krea2 Development Guidelines
 # Krea2 Prompt Director Development Guidelines
 
 ## 1. Development Philosophy
