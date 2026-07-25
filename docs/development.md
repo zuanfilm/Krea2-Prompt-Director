@@ -73,7 +73,7 @@ Git + GitHub
 ---------------------------------------------
 ## Python Standards
 
-Krea2 follows:
+Krea2-Prompt-Director follows:
 
 - PEP 8 style guidelines
 - Type hints whenever possible
