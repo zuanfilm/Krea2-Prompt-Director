@@ -1,4 +1,4 @@
-# Krea2 Prompt Director Architecture
+# VizClick Architecture
 
 ## 1. Overview
 
@@ -8,19 +8,19 @@
 
 ## 4. Core Systems
 
-### KSG — Krea Scene Graph
+### VCSG — VizClick Scene Graph
 
-### KKB — Krea Knowledge Base
+### kkB — VizClick knowledge Base
 
-### KAR — Krea Asset Registry
+### VCAR — VizClick Asset Registry
 
-### KIF — Krea Intelligence Framework
+### VCIF — VizClick Intelligence Framework
 
-### KSC — Krea Scene Compiler
+### VCSC — VizClick Scene Compiler
 
-### KEP — Krea Export Profiles
+### VCEP — VizClick Export Profiles
 
-### KLF — Krea Localization Framework
+### VCLF — VizClick Localization Framework
 
 ## 5. User Interface Architecture
 
