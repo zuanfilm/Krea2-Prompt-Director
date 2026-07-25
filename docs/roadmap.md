@@ -1,16 +1,14 @@
-🗺️ Add Krea2 Development Roadmap
-Krea2-Prompt-Director development prioritizes depth over feature quantity. Each release should make creative direction easier, not simply add more options.
+Krea2-Prompt-Director development prioritizes depth over feature quantity.
+Each release should make creative direction easier, not simply add more options.
 Each version must create a usable creative improvement.
 Version 0.1 — First Light 💡
 
 Foundation
 
 Goal:
-
 Create the skeleton of the system.
 
 Includes:
-
 Core Architecture
 
 ✓ Repository setup
