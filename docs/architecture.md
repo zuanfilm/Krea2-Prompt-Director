@@ -8,19 +8,19 @@
 
 ## 4. Core Systems
 
-### KSG — Krea Scene Graph
+### VCSG — VizClick Scene Graph
 
-### KKB — Krea Knowledge Base
+### VCKB — VizClick Knowledge Base
 
-### KAR — Krea Asset Registry
+### VCAR — VizClick Asset Registry
 
-### KIF — Krea Intelligence Framework
+### VCIF — VizClick Intelligence Framework
 
-### KSC — Krea Scene Compiler
+### VCSC — VizClick Scene Compiler
 
-### KEP — Krea Export Profiles
+### VCEP — VizClick Export Profiles
 
-### KLF — Krea Localization Framework
+### VCLF — VizClick Localization Framework
 
 ## 5. User Interface Architecture
 
@@ -43,7 +43,7 @@
 
                       ▼
 
-          Krea Scene Graph (KSG)
+          VizClick Scene Graph (KSG)
 
                       │
 
@@ -58,7 +58,7 @@
 
                       ▼
 
-          Krea Scene Compiler
+          VizClick Scene Compiler
 
                       │
 
@@ -78,28 +78,28 @@ Separation of Responsibilities
 
 System	Responsibility
 UI	User interaction
-KSG	Creative structure
-KKB	Visual knowledge
-KAR	Reusable assets
-KIF	AI assistance
-KSC	Prompt generation
-KEP	Model optimization
-KLF	Language presentation
+VCSG	Creative structure
+VCKB	Visual knowledge
+VCAR	Reusable assets
+VCIF	AI assistance
+VCSC	Prompt generation
+VCEP	Model optimization
+VCLF	Language presentation
 
 | System | Responsibility        |
 | ------ | --------------------- |
 | UI     | User interaction      |
-| KSG    | Creative structure    |
-| KKB    | Visual knowledge      |
-| KAR    | Reusable assets       |
-| KIF    | AI assistance         |
-| KSC    | Prompt generation     |
-| KEP    | Model optimization    |
-| KLF    | Language presentation |
+| VCSG    | Creative structure    |
+| VCKB    | Visual knowledge      |
+| VCAR    | Reusable assets       |
+| VCIF    | AI assistance         |
+| VCSC    | Prompt generation     |
+| VCEP    | Model optimization    |
+| VCLF    | Language presentation |
 
 ComfyUI Integration Philosophy
 
-Krea2 should not fight ComfyUI.
+VizClick2 should not fight ComfyUI.
 
 It should complement it.
 
@@ -123,7 +123,7 @@ samplers
 images
 nodes
 
-Krea2 handles:
+VizClick2 handles:
 
 creative planning
 scene organization
@@ -136,15 +136,15 @@ Future compatibility
 
 Today:
 
-Krea2
+VizClick2 → Flux3
 
 Tomorrow:
 
-Krea2 → Flux3
-Krea2 → Qwen Image
-Krea2 → Ideogram
-Krea2 → Video Models
-Krea2 → 3D Tools
+VizClick2 → Flux3
+VizClick2 → Qwen Image
+VizClick2 → Ideogram
+VizClick2 → Video Models
+VizClick2 → 3D Tools
 
 
 
