@@ -1,4 +1,4 @@
-Krea2-Prompt-Director Vision
+VizClick Vision
 
 1. Purpose
 
