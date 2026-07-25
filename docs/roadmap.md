@@ -1,4 +1,4 @@
-Krea2-Prompt-Director development prioritizes depth over feature quantity.
+VizClick development prioritizes depth over feature quantity.
 Each release should make creative direction easier, not simply add more options.
 Each version must create a usable creative improvement.
 Version 0.1 — First Light 💡
@@ -20,7 +20,7 @@ Core Architecture
 
 First technical milestone:
 
-Krea2 Prompt Director
+VizClick
     |
     └── Core
           |
@@ -31,7 +31,7 @@ Knowledge Base
 
 Goal:
 
-Teach Krea2 the language of visual creation.
+Teach VizClick the language of visual creation.
 
 Includes:
 
@@ -107,14 +107,14 @@ Custom Character Node
 
 ↓
 
-Krea2 Scene Graph
+VizClick Scene Graph
 Version 0.4 — Creative Workspace 🖥️
 
 Professional UI
 
 Goal:
 
-Make Krea2 feel natural.
+Make VizClick feel natural.
 
 Includes:
 
