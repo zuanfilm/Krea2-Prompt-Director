@@ -77,8 +77,6 @@ The Scene Graph is the central representation of creative intent. Prompts are ge
 
 Separation of Responsibilities
 
-Example:
-
 System	Responsibility
 UI	User interaction
 KSG	Creative structure
@@ -101,8 +99,6 @@ KLF	Language presentation
 | KLF    | Language presentation |
 
 ComfyUI Integration Philosophy
-
-Very important.
 
 Krea2 should not fight ComfyUI.
 
