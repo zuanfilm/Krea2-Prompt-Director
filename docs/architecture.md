@@ -1,4 +1,3 @@
-🏗️ Define Krea2 System Architecture
 # Krea2 Prompt Director Architecture
 
 ## 1. Overview
