@@ -1,0 +1,202 @@
+# ADR-002 — Creative Representation Layer (CRL)
+
+## The renderer-independent representation of creative intent.
+
+**Status:** Accepted
+
+---
+
+# Context
+
+...
+
+**Status:** Accepted
+
+---
+
+# Context
+
+Early versions of VizClick used the term **Scene Graph** to represent the
+creative information describing an image before prompt generation.
+
+As the architecture evolved, it became clear that the system was no longer
+representing a scene.
+
+Instead, it represents **creative intent** independently of any renderer,
+AI model, or prompt language.
+
+The original term "Scene Graph" became too narrow because:
+
+- not every creative work is a scene
+- the system models decisions rather than geometry
+- VizClick is renderer-independent
+- the architecture extends beyond image generation
+
+A broader, renderer-neutral abstraction was required.
+
+---
+
+# Decision
+
+The central domain model of VizClick is renamed from **Scene Graph**
+to **Creative Representation Layer (CRL).**
+
+The Creative Representation Layer becomes the canonical,
+renderer-independent representation of creative intent.
+
+The CRL is the foundation of VizClick and serves as the source of truth
+for every creative project.
+
+Renderers never interact directly with user intent.
+
+Instead, they consume the CRL through Renderer Adapters.
+
+---
+
+# Responsibilities
+
+The Creative Representation Layer is responsible for representing:
+
+- Participants
+- Performance
+- Style
+- Narrative
+- Environment
+- Lighting
+- Camera
+- Composition
+- Motion
+- Materials
+- Color Palette
+- Weather
+- Director Notes
+
+Each category is represented as a Creative Brief.
+
+---
+
+# Architecture
+
+```text
+Creative Representation Layer
+        │
+        ▼
+Creative Knowledge Ecology
+        │
+        ▼
+Context Probability
+        │
+        ▼
+Creative Briefs
+        │
+        ▼
+Production Brief
+        │
+        ▼
+Creative Compiler
+        │
+        ▼
+Renderer Adapter
+        │
+        ▼
+Rendered Output
+```
+
+---
+
+# Design Principles
+
+## Renderer Independence
+
+The CRL never contains renderer-specific concepts.
+
+It never stores:
+
+- prompt syntax
+- keyword weights
+- renderer parameters
+- renderer optimizations
+
+These belong exclusively to Renderer Adapters.
+
+---
+
+## Canonical Representation
+
+The CRL is the single source of truth for creative intent.
+
+All renderers receive the same representation.
+
+Only the translation changes.
+
+Never the intent.
+
+---
+
+## Knowledge Driven
+
+The CRL is built from reusable Creative Concepts stored within the
+Creative Knowledge Ecology.
+
+Creative Concepts are combined into Creative Briefs,
+which together form the Production Brief.
+
+---
+
+## Extensibility
+
+The Creative Representation Layer is designed to support
+future creative domains without architectural changes.
+
+Potential future renderers include:
+
+- Krea
+- FLUX
+- Qwen
+- Blender
+- Unreal Engine
+- CAD Visualization
+- Video Generation
+- Animation Systems
+
+The CRL remains unchanged regardless of renderer.
+
+---
+
+# Consequences
+
+## Positive
+
+- Renderer independence
+- Clear separation of concerns
+- Long-term extensibility
+- Consistent representation of creative intent
+- Strong architectural foundation
+- Explainable creative reasoning
+
+## Trade-offs
+
+- Additional abstraction layer
+- Requires Renderer Adapters
+- Slightly more complex architecture
+
+These trade-offs are accepted because they enable a stable,
+future-proof representation of creativity.
+
+---
+
+# Philosophy
+
+VizClick does not generate prompts.
+
+VizClick represents creative intent.
+
+Renderers are translators.
+
+The Creative Representation Layer is the language they translate.
+
+---
+
+# Guiding Principle
+
+> Represent creativity once. Render anywhere.

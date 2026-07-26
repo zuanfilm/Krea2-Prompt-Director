@@ -1,5 +1,5 @@
 # ADR-001 — Production Brief as the Source of Creative Truth
-
+## The canonical representation of a creative project.
 Status:
 Accepted
 
