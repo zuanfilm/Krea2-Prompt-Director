@@ -34,7 +34,7 @@ Activation Network
 Production Brief
 ```
 
-The first participant in the creative process may be either a human or an artificial intelligence.
+The first Actor in the creative process may be either a human or an artificial intelligence.
 
 The ontology only represents the resulting creative state.
 

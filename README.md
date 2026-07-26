@@ -75,7 +75,7 @@ Imagination may originate from:
 - a creative team
 - an autonomous AI
 - multiple collaborating AI systems
-- future creative participants that do not yet exist
+- future creative Actors that do not yet exist
 
 Visualization may become:
 
@@ -149,7 +149,7 @@ Future renderers should integrate without changing the semantic architecture.
 
 Creativity may begin with either a human or an artificial intelligence.
 
-Neither participant is privileged.
+Neither Actor is privileged.
 
 Both communicate through the same semantic representation.
 

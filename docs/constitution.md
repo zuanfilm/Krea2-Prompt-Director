@@ -34,7 +34,7 @@ Every external system communicates through semantic representations rather than 
 
 ## Principle III
 
-### Humans and AI are Creative Participants
+### Humans and AI are Creative Actors
 
 The creative process may begin with either a human or an artificial intelligence.
 

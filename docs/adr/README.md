@@ -13,6 +13,6 @@ Examples include:
 - Activation Network
 - Visual Markup Language (VML)
 - Renderer Independence
-- Human and AI as Creative Participants
+- Human and AI as Creative Actors
 
 Every major architectural change should be accompanied by a new ADR.

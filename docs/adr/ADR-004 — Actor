@@ -1,0 +1,207 @@
+# ADR-004 — Actor
+
+> **Any element that intentionally occupies a role within a creative representation.**
+
+**Status:** Accepted
+
+---
+
+# Context
+
+Early iterations of the Creative Representation Layer used the term
+**Actor** to describe the primary elements within a creative work.
+
+However, "Actor" proved insufficient because it implied human or
+living subjects and did not naturally extend to products, vehicles,
+architecture, landscapes, or other non-living elements.
+
+Alternative terms such as **Entity**, **Subject**, **Character**, and
+**Element** were considered.
+
+While technically correct, these terms either originated from software
+engineering or failed to capture the narrative nature of creative work.
+
+VizClick models creative intent rather than physical reality.
+
+In a creative representation:
+
+- a car can be the protagonist
+- a luxury watch can communicate prestige
+- a building can project authority
+- a tree can evoke loneliness
+- a coffee cup can become the central focus of a story
+
+The architecture therefore requires a concept that represents intentional
+creative roles rather than real-world classifications.
+
+---
+
+# Decision
+
+VizClick adopts **Actor** as the primary abstraction for every intentional
+element within the Creative Representation Layer.
+
+An Actor is not defined by what it is.
+
+An Actor is defined by the role it plays within the creative work.
+
+An Actor may represent:
+
+- a person
+- an animal
+- a product
+- a vehicle
+- a building
+- an object
+- a landscape
+- a fictional creature
+- any other element capable of carrying creative meaning
+
+Actors are renderer-independent and remain consistent regardless of the
+target rendering system.
+
+---
+
+# Responsibilities
+
+An Actor represents the complete creative description of a single
+intentional element.
+
+An Actor may contain:
+
+- Concept
+- Properties
+- Appearance
+- Performance
+- Pose
+- Motion
+- Expression
+
+Not every Actor requires every component.
+
+For example:
+
+- a human may contain Performance and Pose
+- a luxury watch may contain Appearance and Expression
+- a mountain may only contain Appearance
+
+The representation remains flexible while preserving a consistent
+architectural model.
+
+---
+
+# Relationships
+
+Actors exist independently.
+
+Meaning emerges through Relationships.
+
+Relationships describe how Actors connect to one another.
+
+Examples include:
+
+- social relationships
+- physical interactions
+- spatial relationships
+- visual relationships
+- narrative relationships
+
+A "couple" is therefore not an Actor.
+
+It is two Human Actors connected by a Romantic Relationship.
+
+Likewise:
+
+- a family
+- a sports team
+- a crowd
+- a wedding party
+
+are represented through Actors and Relationships rather than standalone
+concepts.
+
+---
+
+# Design Principles
+
+## Creative Role
+
+Actors represent creative roles rather than physical categories.
+
+Their purpose is to express creative intent.
+
+---
+
+## Renderer Independence
+
+Actors never contain renderer-specific syntax,
+prompt engineering, or optimization rules.
+
+Those belong exclusively to Renderer Adapters.
+
+---
+
+## Composability
+
+Complex scenes emerge through combinations of multiple Actors and their
+Relationships rather than specialized object types.
+
+This keeps the architecture simple while allowing unlimited complexity.
+
+---
+
+## Extensibility
+
+The Actor abstraction supports every creative domain envisioned for
+VizClick, including:
+
+- photography
+- cinema
+- illustration
+- animation
+- architecture
+- product visualization
+- game development
+- industrial design
+- future rendering systems
+
+No architectural changes are required to support new creative domains.
+
+---
+
+# Consequences
+
+## Positive
+
+- Renderer-independent representation
+- Unified abstraction across all creative media
+- Eliminates special-case object types
+- Simplifies scene composition
+- Enables expressive relationship modeling
+- Scales naturally to complex creative works
+
+## Trade-offs
+
+- Requires explicit Relationship modeling
+- Introduces an additional abstraction compared to simple object lists
+
+These trade-offs are accepted because they produce a more expressive,
+consistent, and future-proof representation of creativity.
+
+---
+
+# Philosophy
+
+Actors are not defined by what they are.
+
+Actors are defined by the role they perform within the creative work.
+
+Creativity assigns meaning.
+
+The Actor carries that meaning.
+
+---
+
+# Guiding Principle
+
+> Everything can become an Actor when it serves the story.

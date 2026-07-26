@@ -92,7 +92,7 @@ Visualization
 
 This layer represents creative intent independently from any specific implementation.
 
-The first creative participant may be:
+The first creative Actor may be:
 
 - a person
 - a creative team
@@ -117,7 +117,7 @@ The representation remains stable even as technologies evolve.
 
 VizClick intentionally avoids treating artificial intelligence as merely a tool.
 
-Within the architecture, humans and AI systems are both creative participants.
+Within the architecture, humans and AI systems are both creative Actors.
 
 Neither is privileged.
 

@@ -57,7 +57,7 @@ Instead, they consume the CRL through Renderer Adapters.
 
 The Creative Representation Layer is responsible for representing:
 
-- Participants
+- Actors
 - Performance
 - Style
 - Narrative

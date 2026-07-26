@@ -64,7 +64,7 @@ Instead they think about questions such as:
 - Who are these characters?
 - What do they want?
 - What emotion should the audience experience?
-- What relationship exists between the participants?
+- What relationship exists between the Actors?
 - Why is this moment important?
 - How should light reinforce the narrative?
 - Where should the camera stand?
@@ -238,7 +238,7 @@ That layer should understand:
 
 - narrative
 - intention
-- participants
+- Actors
 - performance
 - atmosphere
 - composition
