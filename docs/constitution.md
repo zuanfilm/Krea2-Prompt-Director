@@ -1,33 +1,69 @@
-# VizClick Architecture
+# Constitutional Principles
 
-## 1. Overview
+## Principle I
 
-## 2. System Philosophy
+### Model Creativity, Not Technology
 
-## 3. High-Level Architecture
+VizClick shall always model the timeless process of creative direction rather than the capabilities of any particular renderer, AI model, or visualization technology.
 
-## 4. Core Systems
+Technologies evolve.
 
-### VCSG — VizClick Scene Graph
+Creative direction endures.
 
-### kkB — VizClick knowledge Base
+Every architectural decision should strengthen the representation of creative intent instead of coupling the system to transient AI capabilities.
 
-### VCAR — VizClick Asset Registry
+---
 
-### VCIF — VizClick Intelligence Framework
+## Principle II
 
-### VCSC — VizClick Scene Compiler
+### Creative Representation Layer
 
-### VCEP — VizClick Export Profiles
+VizClick exists as a Creative Representation Layer between imagination and visualization.
 
-### VCLF — VizClick Localization Framework
+The architecture must remain independent of:
 
-## 5. User Interface Architecture
+- Natural language
+- Prompt syntax
+- AI providers
+- Rendering engines
+- Visualization media
 
-## 6. ComfyUI Integration
+Every external system communicates through semantic representations rather than implementation-specific formats.
 
-## 7. Data Flow
+---
 
-## 8. Extension System
+## Principle III
 
-## 9. Future Compatibility
+### Humans and AI are Creative Participants
+
+The creative process may begin with either a human or an artificial intelligence.
+
+Neither is privileged by the architecture.
+
+Both communicate through the same Creative Ontology and the same Visual Markup Language (VML).
+
+Creative meaning always takes precedence over implementation details.
+
+---
+
+## Principle IV
+
+### Semantic First
+
+Every feature introduced into VizClick must strengthen semantic understanding before improving renderer compatibility.
+
+Renderer adapters may evolve.
+
+The semantic representation must remain stable.
+
+---
+
+## Principle V
+
+### Future Compatibility
+
+VizClick shall never be designed exclusively for today's AI systems.
+
+The architecture must remain capable of representing creative intent for technologies that do not yet exist.
+
+This principle ensures that VizClick continues to serve as the Creative Representation Layer between imagination and visualization regardless of how visualization technologies evolve.
