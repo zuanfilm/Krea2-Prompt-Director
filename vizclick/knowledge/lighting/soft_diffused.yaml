@@ -1,0 +1,78 @@
+id: lighting.soft_diffused
+
+name: Soft Diffused Lighting
+
+category: Lighting
+
+essence: >
+  Soft Diffused Lighting is characterized by broad, low-contrast illumination
+  that gently wraps around subjects, minimizing harsh shadows while preserving
+  natural volume and texture. It creates a calm, elegant, and approachable
+  visual atmosphere that emphasizes form through gradual tonal transitions
+  rather than dramatic contrast.
+
+creative_intent: >
+  Create an image that feels natural, refined, timeless, and emotionally
+  inviting. Soft Diffused Lighting is often chosen when the goal is to
+  highlight the subject without drawing attention to the lighting itself.
+
+visual_characteristics:
+  - Soft shadow transitions
+  - Low contrast
+  - Smooth tonal gradients
+  - Gentle highlights
+  - Preserved skin texture
+  - Even illumination
+  - Natural color rendition
+  - Minimal specular hotspots
+
+creative_relationships:
+
+  supports:
+    - Editorial Fashion
+    - Luxury Photography
+    - Beauty Photography
+    - Lifestyle Photography
+    - Portrait Photography
+
+  combines_with:
+    - Neutral Color Palette
+    - Minimal Composition
+    - Large Soft Light Sources
+    - Overcast Weather
+    - Window Light
+
+  avoids:
+    - Hard Directional Light
+    - High Contrast Noir
+    - Deep Shadow Separation
+
+  influences:
+    - Emotional Warmth
+    - Perceived Luxury
+    - Subject Approachability
+    - Visual Softness
+
+common_applications:
+  - Fashion editorials
+  - Cosmetic campaigns
+  - Luxury product photography
+  - Fine art portraiture
+  - Wedding photography
+  - Lifestyle advertising
+
+expert_notes: >
+  The effectiveness of Soft Diffused Lighting depends less on reducing light
+  intensity and more on increasing the apparent size of the light source
+  relative to the subject. Larger sources produce smoother transitions
+  between light and shadow while maintaining three-dimensional form. The
+  technique is widely used in high-end commercial photography because it
+  conveys sophistication without becoming visually distracting.
+
+metadata:
+
+  maturity: stable
+
+  source: VizClick Creative Knowledge Ecology
+
+  version: "1.0"
