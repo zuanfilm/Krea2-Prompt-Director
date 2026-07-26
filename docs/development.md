@@ -183,7 +183,7 @@ Japanese
 
 ⚙️ Refactor: Improve exporter structure
 -----------------------------------------
-## krea2_prompt_director Development Motto
+## VizClick Development Motto
 
 Every technical decision should answer:
 
