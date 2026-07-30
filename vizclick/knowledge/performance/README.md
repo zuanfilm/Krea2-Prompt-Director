@@ -1,22 +1,26 @@
 # Performance
 
-Performance describes how an Actor intentionally expresses its role within a Creative Representation.
+> **The creative domain that describes how an Actor intentionally expresses its role within a Creative Representation.**
 
-Performance is the behavioral language of an Actor.
+Performance is one of the core domains of the **Creative Knowledge Ecology (CKE)**.
+
+Performance represents the expressive behavior of an Actor.
 
 It is not limited to human acting.
 
-Any Actor capable of communicating intention, emotion, presence, or personality possesses a Performance.
+Any Actor capable of communicating intention, personality, emotion,
+presence, or purpose possesses a Performance.
 
-A luxury watch can express prestige.
+A luxury watch may express prestige.
 
-A sports car can express aggression.
+A sports car may express aggression.
 
-A building can express authority.
+A building may express authority.
 
-A tree can express solitude.
+A tree may express solitude.
 
-Performance represents the expressive qualities perceived by the audience.
+Performance describes **what an Actor communicates**, not merely what it
+looks like.
 
 It answers the question:
 
@@ -24,11 +28,26 @@ It answers the question:
 
 ---
 
-## Purpose
+# Purpose
 
-The Performance domain defines reusable concepts that describe intentional expression.
+The Performance domain provides reusable Creative Concepts that describe
+how an Actor expresses itself within a Creative Representation.
 
-Performance transforms static objects into meaningful participants within a story.
+Performance influences:
+
+- Intention
+- Emotional expression
+- Confidence
+- Presence
+- Personality
+- Attention
+- Interaction
+- Behavioral language
+- Narrative contribution
+- Audience perception
+
+Performance transforms Actors from visual subjects into meaningful
+participants within a story.
 
 Without Performance, Actors merely exist.
 
@@ -36,27 +55,120 @@ With Performance, Actors communicate.
 
 ---
 
-## Performance as Interpretation
+# Design Principles
+
+## Renderer Independent
+
+Performance concepts never describe renderer syntax, prompt engineering,
+or implementation details.
+
+Examples of excluded information include:
+
+- prompt keywords
+- model-specific tokens
+- animation parameters
+- rendering instructions
+
+These belong exclusively to Renderer Adapters.
+
+---
+
+## Creative Representation
+
+Performance represents expressive intent rather than physical
+appearance.
+
+For example:
+
+- Confident
+- Curious
+- Determined
+- Elegant
+- Suspicious
+
+rather than:
+
+- smiling
+- looking left
+- arms crossed
+
+Performance explains **why** an Actor behaves.
+
+It does not prescribe **how** a renderer should depict that behavior.
+
+---
+
+## Reusable Knowledge
+
+Performance concepts are reusable across:
+
+- photography
+- cinema
+- animation
+- illustration
+- concept art
+- game cinematics
+- virtual production
+- future rendering technologies
+
+---
+
+## Semantic Relationships
+
+Performance concepts participate in semantic relationships throughout
+the Creative Knowledge Ecology.
+
+For example:
+
+Confidence
+
+may be associated with:
+
+- Leadership
+- Authority
+- Stability
+- Determination
+- Direct Eye Contact
+
+Likewise,
+
+Curiosity
+
+may be associated with:
+
+- Exploration
+- Discovery
+- Observation
+- Wonder
+- Attention
+
+These relationships enable probabilistic reasoning within the Visual
+Meaning Layer (VML).
+
+---
+
+# Performance as Interpretation
 
 Performance is not emotion alone.
 
 It combines multiple expressive dimensions, including:
 
 - intention
-- confidence
 - emotional state
+- motivation
+- confidence
 - energy
+- personality
 - attention
 - interaction
-- presence
-- personality
 - behavioral expression
 
-Performance represents the complete expressive behavior of an Actor.
+Together these dimensions define how an Actor communicates within the
+Creative Representation.
 
 ---
 
-## Relationship with Narrative
+# Relationship with Narrative
 
 Performance always serves the Narrative.
 
@@ -68,67 +180,90 @@ Example:
 
 Narrative:
 
-    Discovery
+```
+Discovery
+```
 
 Actor:
 
-    Human
+```
+Human
+```
 
 Performance:
 
-    Curious
+```
+Curious
+```
 
 Another Actor:
 
-    Dog
+```
+Dog
+```
 
 Performance:
 
-    Alert
+```
+Alert
+```
 
-Both Performances support the same Narrative while expressing different perspectives.
+Both Performances support the same Narrative while expressing different
+perspectives.
 
 ---
 
-## Relationship with Pose
+# Relationship with Dynamics
+
+Performance and Dynamics complement one another while representing
+different aspects of a Creative Representation.
+
+Performance describes:
+
+> **How does the Actor behave?**
+
+Dynamics describes:
+
+> **How does the scene behave?**
+
+An Actor may remain perfectly still while communicating a powerful
+Performance.
+
+Likewise, a highly dynamic environment may surround an Actor expressing
+calm confidence.
+
+Together they describe both the behavior of the participants and the
+behavior of the world they inhabit.
+
+---
+
+# Relationship with Pose
+
+Pose describes physical arrangement.
+
+Performance describes expressive meaning.
 
 Pose answers:
 
-> How is the body arranged?
+> **How is the body arranged?**
 
 Performance answers:
 
-> Why is the body arranged that way?
+> **Why is the body arranged that way?**
 
-The same Pose may communicate entirely different meanings depending on Performance.
-
-Standing upright may communicate:
+The same Pose may communicate:
 
 - confidence
 - authority
-- fear
 - anticipation
+- fear
 - pride
 
 Performance provides the interpretation.
 
 ---
 
-## Relationship with Dynamics
-
-Dynamics describes energy and movement.
-
-Performance describes intention.
-
-An Actor may remain perfectly still while communicating powerful Performance.
-
-Likewise, an Actor may exhibit energetic Dynamics while expressing calm confidence.
-
-These domains complement one another without overlapping.
-
----
-
-## Relationship with Appearance
+# Relationship with Appearance
 
 Appearance influences what an Actor looks like.
 
@@ -138,19 +273,32 @@ Appearance is visual.
 
 Performance is expressive.
 
----
-
-## Renderer Independence
-
-Performance contains no renderer-specific syntax or prompt engineering.
-
-It represents creative intent independently of implementation.
-
-Renderer Adapters determine how each rendering system interprets Performance.
+Both contribute to the complete identity of an Actor.
 
 ---
 
-## Examples
+# Role within VizClick
+
+Performance concepts are selected by creators to define the expressive
+behavior of an Actor.
+
+The Visual Meaning Layer (VML) may activate related Performance concepts
+through semantic reasoning.
+
+Creators remain free to:
+
+- accept recommendations
+- ignore recommendations
+- extend them through Custom Creative Intent (CCI)
+
+The final Performance Brief represents both semantic understanding and
+human creative direction.
+
+---
+
+# Creative Concepts
+
+Examples include:
 
 - Confidence
 - Curiosity
@@ -158,11 +306,26 @@ Renderer Adapters determine how each rendering system interprets Performance.
 - Elegance
 - Joy
 - Serenity
-- Suspicion
 - Authority
-- Vulnerability
 - Mystery
+- Vulnerability
+- Suspicion
+- Compassion
+- Aggression
+- Pride
+- Humility
+- Playfulness
+- Focus
+
+The Performance domain is intentionally extensible.
+
+New Creative Concepts may be introduced without modifying the overall
+architecture.
 
 ---
 
-The concepts contained within this domain are renderer-independent and represent reusable creative knowledge within the VizClick Creative Knowledge Ecology.
+# Guiding Principle
+
+> Performance represents the expressive language of an Actor.
+>
+> It describes what an Actor communicates rather than how it is rendered.
