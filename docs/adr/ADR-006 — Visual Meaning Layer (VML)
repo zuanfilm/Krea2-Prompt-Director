@@ -1,0 +1,372 @@
+# ADR-006 — Visual Meaning Layer (VML)
+
+> **The reasoning engine that transforms creative intent into semantic understanding through probabilistic activation of creative knowledge.**
+
+**Status:** Accepted
+
+---
+
+# Context
+
+Creative knowledge alone is insufficient to assist creators.
+
+Likewise, user selections alone do not express complete creative intent.
+
+Selecting Creative Concepts such as:
+
+- Golden Hour
+- Editorial Fashion
+- Luxury
+- Marble
+- Chiaroscuro
+
+should not simply populate renderer-specific instructions.
+
+Instead, these selections should activate related creative knowledge,
+suggest complementary concepts, and reveal meaningful creative
+possibilities that naturally emerge from creative practice.
+
+At the same time, creators must always remain free to introduce ideas
+that lie beyond existing knowledge.
+
+VizClick therefore requires a reasoning layer capable of interpreting
+creative intent without limiting imagination.
+
+---
+
+# Decision
+
+VizClick adopts the **Visual Meaning Layer (VML)** as its semantic
+reasoning engine.
+
+The Visual Meaning Layer transforms user intent into probabilistic
+activation of Creative Concepts.
+
+Rather than producing prompts, the VML computes semantic meaning by
+reasoning over the Creative Knowledge Ecology (CKE).
+
+Its purpose is to:
+
+- interpret creative intent
+- infer related ideas
+- recommend complementary concepts
+- strengthen creative coherence
+- assist exploration
+
+The VML represents creative reasoning.
+
+It does not represent rendering.
+
+It does not replace human creativity.
+
+---
+
+# Responsibilities
+
+The Visual Meaning Layer is responsible for:
+
+- interpreting user intent
+- activating related Creative Concepts
+- computing semantic probabilities
+- recommending complementary concepts
+- resolving competing concepts
+- reinforcing coherent creative direction
+- supporting creative exploration
+- respecting Custom Creative Intent
+- integrating human-directed creative decisions
+
+The VML produces semantic understanding.
+
+It never produces renderer-specific output.
+
+---
+
+# Creative Reasoning
+
+Creative reasoning begins when creators select one or more Creative
+Concepts.
+
+For example:
+
+Golden Hour
+
+Rather than treating this as an isolated concept, the VML activates
+related knowledge.
+
+Possible activations include:
+
+- Warm Atmosphere
+- Long Shadows
+- Rim Lighting
+- Golden Glow
+- Nostalgia
+- Sunset Colors
+
+Each activation receives a probability representing semantic relevance.
+
+These probabilities guide creative suggestions.
+
+They never determine creative decisions.
+
+---
+
+# Multi-Concept Reasoning
+
+Creative reasoning naturally combines multiple Creative Concepts.
+
+For example:
+
+Editorial Fashion
+
+Luxury
+
+Minimalism
+
+Together these concepts may activate:
+
+- Studio Lighting
+- Premium Materials
+- Elegant Composition
+- Controlled Color Palette
+- Refined Styling
+- Clean Background
+
+The resulting activation reflects combined creative meaning rather than
+the simple addition of individual concepts.
+
+---
+
+# Probabilistic Guidance
+
+The Visual Meaning Layer provides recommendations rather than
+instructions.
+
+Example:
+
+```text
+Golden Hour
+
+★★★★★ Warm Atmosphere
+
+★★★★★ Long Shadows
+
+★★★★☆ Rim Lighting
+
+★★★★☆ Golden Glow
+
+★★★☆☆ Nostalgia
+
+★★☆☆☆ Lens Flare
+```
+
+Recommendations remain optional.
+
+The creator always decides which ideas become part of the final creative
+representation.
+
+---
+
+# Custom Creative Intent (CCI)
+
+The Visual Meaning Layer assists creative reasoning.
+
+It never replaces human imagination.
+
+Every Creative Brief includes a **Custom Creative Intent (CCI)** channel.
+
+CCI allows creators to introduce ideas beyond the Creative Knowledge
+Ecology.
+
+Examples include:
+
+- intentionally contradictory concepts
+- surreal combinations
+- impossible environments
+- experimental artistic direction
+- highly personal visual language
+
+Examples:
+
+- Snow inside a volcano
+- Luxury with intentionally ugly lighting
+- Medieval knight wearing a NASA helmet
+- Editorial fashion photographed underwater
+- Golden Hour inside a submarine
+
+These ideas bypass probabilistic activation while remaining first-class
+elements of the Creative Representation Layer.
+
+The VML may reason around Custom Creative Intent but never modifies,
+replaces, or suppresses it.
+
+Human creative intent always has precedence over semantic inference.
+
+---
+
+# Architecture
+
+```text
+Creative Knowledge Ecology
+            │
+            ▼
+    Creative Concepts
+            │
+            ▼
+Visual Meaning Layer
+            │
+      ┌─────┴─────┐
+      │           │
+      ▼           ▼
+Activation     Custom Creative
+ Network        Intent (CCI)
+      │           │
+      └─────┬─────┘
+            ▼
+     Creative Briefs
+            │
+            ▼
+    Production Brief
+```
+
+The Visual Meaning Layer reasons over creative knowledge.
+
+Creators extend that reasoning through Custom Creative Intent.
+
+Together they form the Creative Brief.
+
+---
+
+# Design Principles
+
+## Semantic Reasoning
+
+The VML reasons about creative meaning rather than renderer behavior.
+
+Its purpose is to understand creative intent.
+
+---
+
+## Probabilistic Guidance
+
+Creative recommendations are probabilistic.
+
+They suggest possibilities rather than prescribe outcomes.
+
+The creator remains the final decision maker.
+
+---
+
+## Human-Centered Reasoning
+
+The Visual Meaning Layer recommends.
+
+The creator decides.
+
+Semantic reasoning augments human creativity rather than replacing it.
+
+---
+
+## Creative Freedom
+
+Every recommendation is optional.
+
+Creators may override, ignore, extend, or contradict any recommendation
+through Custom Creative Intent.
+
+Unexpected, surreal, contradictory, or experimental ideas remain
+first-class citizens within VizClick.
+
+---
+
+## Renderer Independence
+
+The Visual Meaning Layer never contains:
+
+- prompt syntax
+- renderer parameters
+- optimization strategies
+- model-specific keywords
+
+These responsibilities belong exclusively to Renderer Adapters.
+
+---
+
+## Knowledge Driven
+
+All reasoning originates from Creative Concepts and their semantic
+relationships stored within the Creative Knowledge Ecology.
+
+The VML reasons over knowledge.
+
+It does not redefine knowledge.
+
+---
+
+## Explainability
+
+Every recommendation should be traceable to the Creative Concepts and
+Relationships that produced it.
+
+Creative reasoning should remain transparent rather than opaque.
+
+---
+
+## Extensibility
+
+The reasoning implementation may evolve over time.
+
+Graph reasoning, probabilistic inference, neural reasoning, symbolic AI,
+or future approaches may all implement the same architectural
+responsibility.
+
+The architecture remains stable.
+
+---
+
+# Consequences
+
+## Positive
+
+- Intelligent creative assistance
+- Explainable recommendations
+- Semantic consistency
+- Renderer independence
+- Unlimited creative freedom
+- Transparent reasoning
+- Flexible implementations
+- Future-proof architecture
+
+## Trade-offs
+
+- Introduces an additional reasoning layer
+- Requires semantic relationship maintenance
+- Requires probabilistic evaluation
+
+These trade-offs are accepted because they provide a more intelligent,
+transparent, and collaborative creative experience.
+
+---
+
+# Philosophy
+
+Creative knowledge is static.
+
+Creative intent is dynamic.
+
+The Visual Meaning Layer bridges the two.
+
+It transforms reusable knowledge into meaningful creative guidance.
+
+Creators extend that guidance through Custom Creative Intent.
+
+VizClick assists creativity.
+
+It never replaces imagination.
+
+---
+
+# Guiding Principle
+
+> The Visual Meaning Layer understands creative intent.
+>
+> The creator defines creative direction.

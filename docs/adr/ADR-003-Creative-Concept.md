@@ -1,154 +1,247 @@
-"""
-VizClick - Creative Concept
+# ADR-003 — Creative Knowledge Ecology (CKE)
 
-A Creative Concept is the smallest reusable unit of creative knowledge
-within the Creative Knowledge Ecology (CKE).
+> **The renderer-independent knowledge system that stores reusable creative concepts.**
 
-Creative Concepts are renderer-independent and represent knowledge
-about creative ideas, not prompts or implementation details.
+**Status:** Accepted
 
-Examples:
-    - Soft Diffused Lighting
-    - Editorial Fashion
-    - Golden Hour
-    - Rule of Thirds
-    - Luxury
-    - Rain
-    - Marble
+---
 
-A Creative Concept describes:
+# Context
 
-    • What the concept is
-    • Why creators use it
-    • How it relates to other creative concepts
+As VizClick evolved beyond prompt generation, it became necessary to
+separate reusable creative knowledge from individual creative works.
+The Creative Knowledge Ecology represents accumulated reusable creative
+knowledge.
 
-Creative Concepts are the foundation of VizClick's
-Creative Representation Layer (CRL).
-"""
+It intentionally does not limit creativity.
 
-from __future__ import annotations
+Creators may always introduce ideas beyond the current knowledge base
+through Custom Creative Intent.
 
-from dataclasses import dataclass, field
-from typing import Dict, List
+Creative ideas such as:
 
+- Golden Hour
+- Editorial Fashion
+- Marble
+- Rule of Thirds
+- Soft Diffused Lighting
 
-@dataclass(slots=True)
-class CreativeRelationships:
-    """
-    Semantic relationships between Creative Concepts.
+should not be recreated for every project.
 
-    These relationships are renderer-independent and describe how
-    concepts naturally interact within creative practice.
-    """
+Instead, they should exist as reusable knowledge that can be shared,
+combined, and interpreted consistently across every creative domain.
 
-    supports: Dict[str, float] = field(default_factory=dict)
+This requires a centralized knowledge system independent from renderers,
+creative briefs, and individual projects.
 
-    combines_with: Dict[str, float] = field(default_factory=dict)
+---
 
-    avoids: Dict[str, float] = field(default_factory=dict)
+# Decision
 
-    influences: Dict[str, float] = field(default_factory=dict)
+VizClick adopts the **Creative Knowledge Ecology (CKE)** as the canonical
+repository of reusable creative knowledge.
 
-    commonly_used_in: List[str] = field(default_factory=list)
+The Creative Knowledge Ecology stores immutable Creative Concepts and the
+semantic relationships between them.
 
+The CKE is renderer-independent.
 
-@dataclass(slots=True)
-class CreativeMetadata:
-    """
-    Maintenance information for a Creative Concept.
+It does not contain prompts, renderer syntax, optimization rules, or
+project-specific information.
 
-    Metadata never affects creative reasoning.
-    It exists only to help manage and evolve the knowledge base.
-    """
+Instead, it provides the reusable vocabulary from which creative intent
+is composed.
 
-    version: str = "1.0"
+---
 
-    author: str = ""
+# Responsibilities
 
-    confidence: float = 1.0
+The Creative Knowledge Ecology is responsible for:
 
-    sources: List[str] = field(default_factory=list)
+- storing Creative Concepts
+- organizing concepts into domains
+- maintaining semantic relationships
+- supporting concept discovery
+- enabling concept reuse
+- preserving renderer independence
 
-    last_updated: str = ""
+The CKE is a knowledge system.
 
+It is not a project.
 
-@dataclass(slots=True)
-class CreativeConcept:
-    """
-    The smallest reusable unit of creative knowledge.
+It is not a scene.
 
-    Creative Concepts are immutable pieces of domain knowledge that
-    can be combined into Creative Briefs and ultimately compiled into
-    a Production Brief.
+It is not a renderer.
 
-    They never contain renderer-specific information.
-    """
+---
 
-    # ------------------------------------------------------------------
-    # Identity
-    # ------------------------------------------------------------------
+# Creative Concepts
 
-    id: str
+Creative Concepts are the smallest reusable units of creative knowledge.
 
-    name: str
+Each Creative Concept represents a single creative idea.
 
-    category: str
+Examples include:
 
-    # ------------------------------------------------------------------
-    # Meaning
-    # ------------------------------------------------------------------
+- Golden Hour
+- Marble
+- Luxury
+- Rule of Thirds
+- Dynamic Motion Blur
+- Chiaroscuro
+- Rain
 
-    essence: str
+Creative Concepts remain immutable.
 
-    guiding_question: str
+Projects reference Creative Concepts rather than duplicating them.
 
-    # ------------------------------------------------------------------
-    # Creative Knowledge
-    # ------------------------------------------------------------------
+---
 
-    creative_relationships: CreativeRelationships = field(
-        default_factory=CreativeRelationships
-    )
+# Relationships
 
-    # ------------------------------------------------------------------
-    # Maintenance
-    # ------------------------------------------------------------------
+Creative Concepts gain additional meaning through semantic relationships.
 
-    metadata: CreativeMetadata = field(default_factory=CreativeMetadata)
+Examples include:
 
-    # ------------------------------------------------------------------
-    # Convenience
-    # ------------------------------------------------------------------
+- supports
+- combines_with
+- avoids
+- influences
+- commonly_used_in
 
-    @property
-    def is_renderer_independent(self) -> bool:
-        """Creative Concepts are always renderer independent."""
-        return True
+These relationships describe creative practice rather than renderer
+behavior.
 
-    def summary(self) -> dict:
-        """
-        Returns a simplified representation useful for debugging,
-        inspection, and future tooling.
-        """
+For example:
 
-        return {
-            "id": self.id,
-            "name": self.name,
-            "category": self.category,
-            "essence": self.essence,
-            "guiding_question": self.guiding_question,
-            "creative_relationships": {
-                "supports": self.creative_relationships.supports,
-                "combines_with": self.creative_relationships.combines_with,
-                "avoids": self.creative_relationships.avoids,
-                "influences": self.creative_relationships.influences,
-                "commonly_used_in": self.creative_relationships.commonly_used_in,
-            },
-            "metadata": {
-                "version": self.metadata.version,
-                "author": self.metadata.author,
-                "confidence": self.metadata.confidence,
-                "sources": self.metadata.sources,
-                "last_updated": self.metadata.last_updated,
-            },
-        }
+Golden Hour
+
+supports → Warm Atmosphere
+
+combines_with → Rim Lighting
+
+avoids → Flat Lighting
+
+influences → Nostalgia
+
+Relationships remain renderer-independent.
+
+---
+
+# Architecture
+
+```text
+Creative Knowledge Ecology (CKE)
+                │
+                ▼
+Creative Concepts
+                │
+                ▼
+Creative Relationships
+                │
+                ▼
+Creative Briefs
+                │
+                ▼
+Creative Representation Layer (CRL)
+                │
+                ▼
+Production Brief
+                │
+                ▼
+Renderer Adapter
+                │
+                ▼
+Rendered Output
+```
+
+---
+
+# Design Principles
+
+## Immutable Knowledge
+
+Creative Concepts are immutable.
+
+They represent stable creative knowledge rather than project-specific
+decisions.
+
+---
+
+## Renderer Independence
+
+Creative Concepts never contain:
+
+- prompt syntax
+- keyword weighting
+- renderer parameters
+- optimization techniques
+
+These belong exclusively to Renderer Adapters.
+
+---
+
+## Reusability
+
+Creative Concepts are intended to be reused across unlimited projects.
+
+A single concept should be defined once and referenced many times.
+
+---
+
+## Composability
+
+Complex creative intent emerges from combinations of multiple Creative
+Concepts.
+
+No concept assumes a specific renderer, subject, or project.
+
+---
+
+## Extensibility
+
+The Creative Knowledge Ecology is designed to grow continuously.
+
+New concepts can be added without changing the architecture.
+
+Existing concepts remain stable.
+
+---
+
+# Consequences
+
+## Positive
+
+- Reusable creative knowledge
+- Renderer independence
+- Consistent semantics
+- Reduced duplication
+- Explainable creative reasoning
+- Long-term scalability
+
+## Trade-offs
+
+- Requires knowledge curation
+- Requires semantic relationship management
+- Introduces an additional abstraction layer
+
+These trade-offs are accepted because they produce a reusable,
+future-proof creative knowledge system.
+
+---
+
+# Philosophy
+
+Creative knowledge should exist independently of projects.
+
+Projects compose knowledge.
+
+Renderers translate knowledge.
+
+Knowledge itself remains unchanged.
+
+---
+
+# Guiding Principle
+
+> Define knowledge once. Reuse it everywhere.

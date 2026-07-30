@@ -1,6 +1,6 @@
 # ADR-002 — Creative Representation Layer (CRL)
 
-## The renderer-independent representation of creative intent.
+> **The canonical, renderer-independent representation of creative intent.**
 
 **Status:** Accepted
 
@@ -8,99 +8,236 @@
 
 # Context
 
-...
+Artificial intelligence renderers evolve rapidly.
 
-**Status:** Accepted
+Prompt syntax changes.
 
----
+Rendering capabilities improve.
 
-# Context
+Optimization techniques become obsolete.
 
-Early versions of VizClick used the term **Scene Graph** to represent the
-creative information describing an image before prompt generation.
+Creative intent, however, remains fundamentally independent from the
+technology used to visualize it.
 
-As the architecture evolved, it became clear that the system was no longer
-representing a scene.
+VizClick therefore separates **creative representation** from
+**creative realization**.
 
-Instead, it represents **creative intent** independently of any renderer,
-AI model, or prompt language.
+Rather than describing prompts, VizClick represents creative intent
+through a canonical, renderer-independent architecture.
 
-The original term "Scene Graph" became too narrow because:
-
-- not every creative work is a scene
-- the system models decisions rather than geometry
-- VizClick is renderer-independent
-- the architecture extends beyond image generation
-
-A broader, renderer-neutral abstraction was required.
+Every rendering technology becomes an interchangeable implementation
+target.
 
 ---
 
 # Decision
 
-The central domain model of VizClick is renamed from **Scene Graph**
-to **Creative Representation Layer (CRL).**
+VizClick adopts the **Creative Representation Layer (CRL)** as the
+canonical representation of creative intent.
 
-The Creative Representation Layer becomes the canonical,
-renderer-independent representation of creative intent.
+The Creative Representation Layer is an architectural abstraction.
 
-The CRL is the foundation of VizClick and serves as the source of truth
-for every creative project.
+It organizes creative knowledge into renderer-independent Creative
+Briefs that describe *what* should be expressed rather than *how* it
+should be rendered.
 
-Renderers never interact directly with user intent.
+The CRL becomes the single source of truth for every creative project.
 
-Instead, they consume the CRL through Renderer Adapters.
+Renderer Adapters translate this representation into the syntax,
+capabilities, and conventions of individual rendering technologies.
 
 ---
 
 # Responsibilities
 
-The Creative Representation Layer is responsible for representing:
+The Creative Representation Layer is responsible for:
 
-- Actors
-- Performance
-- Style
-- Narrative
-- Environment
-- Lighting
-- Camera
-- Composition
-- Motion
-- Materials
-- Color Palette
-- Weather
-- Director Notes
+- organizing creative intent
+- composing Creative Briefs
+- preserving renderer independence
+- integrating reusable creative knowledge
+- preserving Custom Creative Intent
+- providing a canonical creative representation
+- supporting future rendering technologies
 
-Each category is represented as a Creative Brief.
+The CRL represents creativity.
+
+It does not represent rendering.
 
 ---
 
 # Architecture
 
 ```text
-Creative Representation Layer
-        │
-        ▼
-Creative Knowledge Ecology
-        │
-        ▼
-Context Probability
-        │
-        ▼
-Creative Briefs
-        │
-        ▼
-Production Brief
-        │
-        ▼
-Creative Compiler
-        │
-        ▼
-Renderer Adapter
-        │
-        ▼
-Rendered Output
+                    Creative Vision
+                           │
+                           ▼
+           Creative Representation Layer
+                           │
+        ┌──────────────────┼──────────────────┐
+        │                  │                  │
+        ▼                  ▼                  ▼
+Creative Knowledge     Visual Meaning     Custom Creative
+Ecology (CKE)          Layer (VML)          Intent (CCI)
+        │                  │                  │
+        ▼                  ▼                  │
+Creative Concepts   Activation Network       │
+        │                  │                  │
+        └──────────────┬───┴──────────────────┘
+                       ▼
+                Creative Briefs
+                       │
+                       ▼
+               Production Brief
+                       │
+                       ▼
+              Creative Compiler
+                       │
+                       ▼
+              Renderer Adapter
+                       │
+                       ▼
+               Rendered Output
 ```
+
+---
+
+# Creative Briefs
+
+Creative Briefs are the primary building blocks of the Creative
+Representation Layer.
+
+Each Brief represents one aspect of creative intent.
+
+Examples include:
+
+- Actor Brief
+- Lighting Brief
+- Camera Brief
+- Motion Brief
+- Environment Brief
+- Material Brief
+- Performance Brief
+- Narrative Brief
+
+Each Creative Brief is composed from three complementary sources.
+
+## Activated Creative Concepts
+
+Creative Concepts activated through semantic reasoning performed by the
+Visual Meaning Layer and the Activation Network.
+
+These represent the system's understanding of the creator's intent.
+
+---
+
+## Recommended Concepts
+
+Creative Concepts suggested by probabilistic reasoning.
+
+Recommendations remain optional.
+
+Creators may accept, ignore, or modify them.
+
+---
+
+## Custom Creative Intent (CCI)
+
+Every Creative Brief includes a **Custom Creative Intent** channel.
+
+Custom Creative Intent allows creators to introduce ideas beyond the
+Creative Knowledge Ecology.
+
+These ideas bypass semantic reasoning while remaining first-class
+elements of the Creative Representation Layer.
+
+Examples include:
+
+- intentionally contradictory concepts
+- surreal combinations
+- impossible environments
+- experimental artistic direction
+- highly personal creative decisions
+
+Custom Creative Intent is preserved throughout the entire creative
+pipeline.
+
+---
+
+# Core Components
+
+## Creative Knowledge Ecology (CKE)
+
+Provides immutable Creative Concepts that represent reusable creative
+knowledge.
+
+The CKE stores knowledge.
+
+It does not perform reasoning.
+
+---
+
+## Visual Meaning Layer (VML)
+
+Interprets creative intent.
+
+Computes semantic understanding.
+
+Produces meaningful activation of Creative Concepts.
+
+---
+
+## Activation Network
+
+Propagates semantic activation throughout the Creative Knowledge Ecology.
+
+Computes activation strengths.
+
+Discovers meaningful relationships.
+
+Produces recommendations.
+
+---
+
+## Creative Briefs
+
+Compose creative intent.
+
+Each Brief combines:
+
+- Activated Creative Concepts
+- Recommended Concepts
+- Custom Creative Intent
+
+Creative Briefs remain completely renderer-independent.
+
+---
+
+## Production Brief
+
+Represents the compiled creative description of an entire project.
+
+The Production Brief contains no renderer syntax.
+
+---
+
+## Creative Compiler
+
+Transforms independent Creative Briefs into a coherent Production Brief.
+
+Validates consistency.
+
+Resolves dependencies.
+
+Preserves semantic meaning.
+
+---
+
+## Renderer Adapter
+
+Translates the Production Brief into renderer-specific instructions.
+
+Renderer Adapters are the only components aware of rendering technology.
 
 ---
 
@@ -108,58 +245,90 @@ Rendered Output
 
 ## Renderer Independence
 
-The CRL never contains renderer-specific concepts.
+Creative intent exists independently from rendering technology.
 
-It never stores:
-
-- prompt syntax
-- keyword weights
-- renderer parameters
-- renderer optimizations
-
-These belong exclusively to Renderer Adapters.
-
----
-
-## Canonical Representation
-
-The CRL is the single source of truth for creative intent.
-
-All renderers receive the same representation.
-
-Only the translation changes.
-
-Never the intent.
+Renderer-specific behavior belongs exclusively to Renderer Adapters.
 
 ---
 
 ## Knowledge Driven
 
-The CRL is built from reusable Creative Concepts stored within the
-Creative Knowledge Ecology.
+Reusable creative knowledge is stored once within the Creative Knowledge
+Ecology.
 
-Creative Concepts are combined into Creative Briefs,
-which together form the Production Brief.
+Projects compose Creative Concepts rather than duplicating them.
+
+---
+
+## Semantic Reasoning
+
+The Visual Meaning Layer expands creative intent through probabilistic
+reasoning.
+
+Recommendations emerge from semantic relationships.
+
+They are never hardcoded.
+
+---
+
+## Creative Freedom
+
+The Creative Representation Layer assists creative thinking.
+
+It never constrains it.
+
+Every Creative Brief contains a **Custom Creative Intent** channel.
+
+Custom Creative Intent bypasses semantic reasoning while remaining a
+first-class part of the creative representation.
+
+Experimental, contradictory, surreal, and intentionally illogical ideas
+are preserved without modification.
+
+---
+
+## Human-Centered Design
+
+Semantic reasoning recommends.
+
+Creators decide.
+
+Human imagination always has precedence over probabilistic inference.
+
+---
+
+## Canonical Representation
+
+The Creative Representation Layer is the single source of truth.
+
+Every renderer receives a translation of the same creative
+representation.
+
+---
+
+## Separation of Concerns
+
+Knowledge.
+
+Reasoning.
+
+Composition.
+
+Compilation.
+
+Translation.
+
+Each architectural component owns exactly one responsibility.
 
 ---
 
 ## Extensibility
 
-The Creative Representation Layer is designed to support
-future creative domains without architectural changes.
+New Creative Concepts, Actor types, Creative Briefs, reasoning systems,
+or Renderer Adapters may be introduced without changing the overall
+architecture.
 
-Potential future renderers include:
-
-- Krea
-- FLUX
-- Qwen
-- Blender
-- Unreal Engine
-- CAD Visualization
-- Video Generation
-- Animation Systems
-
-The CRL remains unchanged regardless of renderer.
+The CRL remains stable while implementations evolve.
 
 ---
 
@@ -167,36 +336,57 @@ The CRL remains unchanged regardless of renderer.
 
 ## Positive
 
-- Renderer independence
-- Clear separation of concerns
-- Long-term extensibility
-- Consistent representation of creative intent
-- Strong architectural foundation
-- Explainable creative reasoning
+- Complete renderer independence
+- Intelligent semantic reasoning
+- Explainable recommendations
+- Unlimited creative freedom
+- Canonical creative representation
+- Reusable creative knowledge
+- Future-proof architecture
+- Extensible reasoning systems
 
 ## Trade-offs
 
-- Additional abstraction layer
-- Requires Renderer Adapters
-- Slightly more complex architecture
+- Requires multiple abstraction layers
+- Requires maintenance of semantic relationships
+- Introduces additional architectural complexity
 
-These trade-offs are accepted because they enable a stable,
-future-proof representation of creativity.
+These trade-offs are accepted because they provide a more expressive,
+scalable, and durable representation of creative intent.
 
 ---
 
 # Philosophy
 
-VizClick does not generate prompts.
+Creative Concepts provide reusable knowledge.
 
-VizClick represents creative intent.
+The Visual Meaning Layer expands that knowledge through semantic
+reasoning.
 
-Renderers are translators.
+The Activation Network discovers meaningful creative connections.
 
-The Creative Representation Layer is the language they translate.
+Creators extend or override those recommendations through Custom
+Creative Intent.
+
+Creative Briefs compose both semantic understanding and human
+imagination into a unified representation.
+
+The Creative Representation Layer organizes the result.
+
+The Production Brief compiles it.
+
+Renderer Adapters translate it.
+
+Rendering technologies visualize it.
 
 ---
 
 # Guiding Principle
 
-> Represent creativity once. Render anywhere.
+> Represent creativity once.
+>
+> Understand it semantically.
+>
+> Preserve human imagination.
+>
+> Render anywhere.

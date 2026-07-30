@@ -1,0 +1,396 @@
+# ADR-007 — Activation Network
+
+> **The probabilistic propagation engine that discovers semantic connections within the Creative Knowledge Ecology.**
+
+**Status:** Accepted
+
+---
+
+# Context
+
+Creative reasoning requires more than isolated Creative Concepts.
+
+When creators express creative intent, that intent naturally activates
+related knowledge.
+
+For example:
+
+- Golden Hour suggests Warm Atmosphere.
+- Editorial Fashion suggests Controlled Lighting.
+- Luxury suggests Premium Materials.
+- Rain suggests Reflections.
+
+These associations are not deterministic.
+
+They emerge from accumulated creative practice represented within the
+Creative Knowledge Ecology (CKE).
+
+VizClick therefore requires a mechanism capable of propagating semantic
+meaning throughout the knowledge graph while preserving complete creative
+freedom.
+
+This mechanism is the Activation Network.
+
+---
+
+# Decision
+
+VizClick adopts the **Activation Network** as the probabilistic
+propagation engine of the Visual Meaning Layer (VML).
+
+The Activation Network evaluates semantic relationships between Creative
+Concepts and computes activation strengths throughout the Creative
+Knowledge Ecology.
+
+Its purpose is to reveal meaningful creative possibilities.
+
+It never makes creative decisions.
+
+The Activation Network transforms isolated selections into connected
+creative understanding.
+
+Creators remain the final authority.
+
+---
+
+# Responsibilities
+
+The Activation Network is responsible for:
+
+- propagating semantic activation
+- computing activation strength
+- ranking activated concepts
+- reinforcing compatible concepts
+- reducing conflicting activations
+- identifying emerging creative themes
+- supporting explainable recommendations
+
+The Activation Network never:
+
+- modifies Creative Concepts
+- generates renderer-specific instructions
+- overrides creator decisions
+
+Its responsibility is semantic propagation.
+
+---
+
+# Semantic Propagation
+
+Creative Concepts are connected through semantic relationships stored in
+the Creative Knowledge Ecology.
+
+When one concept becomes active, activation naturally propagates through
+those relationships.
+
+Example:
+
+```text
+Golden Hour
+      │
+      ├──────── Warm Atmosphere
+      │
+      ├──────── Long Shadows
+      │
+      ├──────── Golden Glow
+      │
+      ├──────── Rim Lighting
+      │
+      └──────── Sunset Colors
+```
+
+Each propagated concept receives an activation strength representing its
+semantic relevance.
+
+Propagation naturally weakens as semantic distance increases.
+
+---
+
+# Multi-Concept Activation
+
+Creative intent rarely consists of a single concept.
+
+Multiple activated concepts reinforce or suppress one another.
+
+For example:
+
+Editorial Fashion
+
+Luxury
+
+Minimalism
+
+Together these concepts reinforce:
+
+- Studio Lighting
+- Premium Materials
+- Elegant Composition
+- Controlled Color Palette
+- Refined Styling
+
+while reducing activation for concepts such as:
+
+- Cartoon Style
+- Heavy Grunge
+- Chaotic Composition
+
+The resulting activation graph represents combined creative meaning.
+
+---
+
+# Activation Strength
+
+Activation strength represents semantic confidence.
+
+Higher activation indicates stronger creative relevance.
+
+Example:
+
+```text
+Warm Atmosphere      ★★★★★
+
+Long Shadows         ★★★★★
+
+Golden Glow          ★★★★☆
+
+Lens Flare           ★★★☆☆
+
+Dust                 ★★☆☆☆
+
+Heavy Fog            ★☆☆☆☆
+```
+
+Activation strengths prioritize recommendations.
+
+They never determine the final creative direction.
+
+---
+
+# Conflict Resolution
+
+Creative Concepts may reinforce or compete with one another.
+
+For example:
+
+Minimalism
+
+supports
+
+Negative Space
+
+while reducing activation for:
+
+- Visual Clutter
+- Dense Decoration
+- Ornate Decoration
+
+Conflict resolution improves recommendation quality.
+
+It never prevents creators from making unconventional choices.
+
+---
+
+# Custom Creative Intent (CCI)
+
+The Activation Network operates exclusively on Creative Concepts stored
+within the Creative Knowledge Ecology.
+
+Custom Creative Intent (CCI) is not subjected to probabilistic
+activation.
+
+Instead, CCI bypasses semantic propagation and is merged with activated
+Creative Concepts during Creative Brief composition.
+
+Examples include:
+
+- Snow inside a volcano
+- Medieval knight wearing a NASA helmet
+- Luxury with intentionally ugly lighting
+- Horror using pastel colors
+- Floating ocean above a city
+
+These ideas remain fully preserved throughout the creative pipeline.
+
+The Activation Network may activate concepts around Custom Creative
+Intent but never alters, suppresses, or replaces it.
+
+---
+
+# Explainability
+
+Every activation should be explainable.
+
+VizClick should always be capable of describing why a concept became
+active.
+
+Example:
+
+```text
+Warm Atmosphere
+
+Activated because:
+
+Golden Hour          0.97
+
+Natural Warm Light   0.91
+
+Sunset Colors        0.88
+```
+
+Recommendations should always remain transparent.
+
+Creators should understand why concepts appear.
+
+---
+
+# Architecture
+
+```text
+Creative Knowledge Ecology
+            │
+            ▼
+    Creative Concepts
+            │
+            ▼
+   Activation Network
+            │
+            ▼
+ Activation Graph
+            │
+            ▼
+ Activated Concepts
+            │
+            │
+            ├──────────────┐
+            │              │
+            ▼              ▼
+ Recommended       Custom Creative
+  Concepts          Intent (CCI)
+            │              │
+            └──────┬───────┘
+                   ▼
+            Creative Briefs
+```
+
+The Activation Network reasons only over Creative Concepts.
+
+Custom Creative Intent remains independent.
+
+Both become part of the resulting Creative Brief.
+
+---
+
+# Design Principles
+
+## Probabilistic Reasoning
+
+Creative activation is probabilistic.
+
+It represents semantic likelihood rather than certainty.
+
+---
+
+## Semantic Propagation
+
+Activation spreads through semantic relationships.
+
+Meaning emerges from connected Creative Concepts rather than isolated
+knowledge.
+
+---
+
+## Explainability
+
+Every activation must be traceable.
+
+Recommendations should never become opaque.
+
+Creators should always understand why concepts became active.
+
+---
+
+## Non-Destructive
+
+The Activation Network never modifies Creative Concepts.
+
+Knowledge remains immutable.
+
+Only activation states change.
+
+---
+
+## Human Override
+
+Probabilistic activation never overrides explicit creator intent.
+
+Recommendations are always optional.
+
+Custom Creative Intent always has the highest creative priority.
+
+---
+
+## Renderer Independence
+
+The Activation Network is completely unaware of rendering technology.
+
+It reasons only about semantic meaning.
+
+---
+
+## Adaptability
+
+The propagation algorithm may evolve over time.
+
+Graph traversal, probabilistic inference, symbolic reasoning, neural
+reasoning, or future approaches may all implement the same
+architectural responsibility.
+
+The architecture remains stable.
+
+---
+
+# Consequences
+
+## Positive
+
+- Intelligent semantic recommendations
+- Explainable reasoning
+- Transparent decision support
+- Renderer independence
+- Unlimited creative freedom
+- Flexible implementation
+- Future-proof architecture
+
+## Trade-offs
+
+- Requires maintenance of semantic relationships
+- Requires probabilistic evaluation
+- Introduces computational complexity
+
+These trade-offs are accepted because they produce an intelligent,
+transparent, and collaborative creative reasoning system.
+
+---
+
+# Philosophy
+
+Creative knowledge is connected.
+
+Creative intent activates that knowledge.
+
+The Activation Network reveals meaningful creative possibilities.
+
+Creators determine which possibilities become part of the final creative
+representation.
+
+Semantic reasoning informs.
+
+Human imagination directs.
+
+---
+
+# Guiding Principle
+
+> The Activation Network discovers possibilities.
+>
+> The creator chooses which possibilities become reality.

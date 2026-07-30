@@ -1,0 +1,327 @@
+# ADR-005 — Relationship
+
+> **The semantic connections that transform independent Actors into meaningful creative compositions.**
+
+**Status:** Accepted
+
+---
+
+# Context
+
+Actors describe the intentional elements within a creative representation.
+
+However, a collection of independent Actors does not, by itself, create
+meaning.
+
+Meaning emerges through the relationships between those Actors.
+
+For example:
+
+- a person holding a camera
+- a watch resting on marble
+- a child looking toward a window
+- a vehicle parked beside a mountain
+- a dragon circling a castle
+
+In each case, the creative significance lies not only in the Actors
+themselves, but in how they interact.
+
+Traditional scene representations often embed these interactions directly
+inside objects, creating tightly coupled models that become difficult to
+reuse and extend.
+
+VizClick instead models relationships as independent architectural
+components.
+
+This preserves the independence of Actors while allowing complex creative
+representations to emerge through composition.
+
+---
+
+# Decision
+
+VizClick adopts **Relationship** as the canonical representation of
+semantic connections between Actors.
+
+Relationships are renderer-independent.
+
+They describe creative meaning rather than implementation details.
+
+A Relationship always exists between two or more Actors.
+
+It defines how those Actors interact, influence one another, or are
+perceived together within a creative representation.
+
+Relationships are first-class architectural components of the Creative
+Representation Layer (CRL).
+
+---
+
+# Responsibilities
+
+A Relationship is responsible for describing semantic connections between
+Actors.
+
+Relationships may represent:
+
+- spatial organization
+- physical interaction
+- visual composition
+- narrative roles
+- emotional dynamics
+- temporal ordering
+- symbolic meaning
+- causal influence
+
+Relationships never describe renderer behavior.
+
+They describe creative meaning.
+
+---
+
+# Relationship Categories
+
+Although relationships are extensible, common categories include:
+
+## Spatial
+
+Describes where Actors exist relative to one another.
+
+Examples:
+
+- beside
+- behind
+- inside
+- above
+- below
+- surrounding
+- overlapping
+
+---
+
+## Physical
+
+Describes direct interaction.
+
+Examples:
+
+- holding
+- touching
+- carrying
+- supporting
+- wearing
+- attached to
+- connected to
+
+---
+
+## Visual
+
+Describes how Actors contribute to composition.
+
+Examples:
+
+- foreground
+- background
+- framing
+- silhouette
+- reflection
+- leading toward
+- visually balanced with
+
+---
+
+## Narrative
+
+Describes storytelling roles.
+
+Examples:
+
+- protagonist
+- antagonist
+- companion
+- observer
+- protector
+- rival
+- audience
+
+---
+
+## Emotional
+
+Describes emotional connections.
+
+Examples:
+
+- comforting
+- threatening
+- admiring
+- fearing
+- trusting
+- ignoring
+
+---
+
+## Temporal
+
+Describes relationships across time.
+
+Examples:
+
+- before
+- after
+- simultaneous
+- approaching
+- departing
+- following
+
+---
+
+## Symbolic
+
+Describes conceptual meaning.
+
+Examples:
+
+- represents
+- contrasts with
+- reinforces
+- echoes
+- transforms
+- symbolizes
+
+---
+
+# Architecture
+
+```text
+Creative Knowledge Ecology
+            │
+            ▼
+Creative Concepts
+            │
+            ▼
+Actors
+            │
+            ▼
+Relationships
+            │
+            ▼
+Creative Representation Layer
+            │
+            ▼
+Production Brief
+            │
+            ▼
+Creative Compiler
+            │
+            ▼
+Renderer Adapter
+            │
+            ▼
+Rendered Output
+```
+
+Relationships do not own Actors.
+
+Actors do not own Relationships.
+
+Both are composed together within the Creative Representation Layer.
+
+---
+
+# Design Principles
+
+## Independence
+
+Relationships exist independently from the Actors they connect.
+
+Actors remain reusable regardless of the relationships in which they
+participate.
+
+---
+
+## Semantic Meaning
+
+Relationships describe creative meaning rather than physical simulation.
+
+They answer questions such as:
+
+- Who influences whom?
+- What draws attention?
+- What supports the story?
+- How should the viewer perceive these Actors together?
+
+---
+
+## Renderer Independence
+
+Relationships never contain:
+
+- prompt syntax
+- renderer parameters
+- optimization rules
+- keyword weighting
+
+Renderer Adapters determine how relationships are translated for each
+target rendering system.
+
+---
+
+## Composability
+
+Complex scenes emerge through combinations of simple Actors connected by
+Relationships.
+
+Meaning grows through composition rather than inheritance.
+
+---
+
+## Extensibility
+
+New relationship types can be introduced without modifying existing
+Actors or Creative Concepts.
+
+This enables VizClick to support future creative domains without changing
+its architectural foundation.
+
+---
+
+# Consequences
+
+## Positive
+
+- Decouples Actors from interactions
+- Enables reusable scene composition
+- Improves semantic clarity
+- Supports richer creative reasoning
+- Scales naturally to complex scenes
+- Preserves renderer independence
+
+## Trade-offs
+
+- Introduces an additional abstraction layer
+- Requires explicit relationship modeling
+- Increases the number of architectural objects
+
+These trade-offs are accepted because they produce a more expressive,
+maintainable, and extensible representation of creative intent.
+
+---
+
+# Philosophy
+
+Actors provide identity.
+
+Relationships provide meaning.
+
+Creative Concepts provide knowledge.
+
+Together they form a renderer-independent representation of creative
+intent.
+
+---
+
+# Guiding Principle
+
+> Creativity emerges not only from what exists, but from how things relate.

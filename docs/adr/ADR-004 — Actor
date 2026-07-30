@@ -1,6 +1,6 @@
 # ADR-004 — Actor
 
-> **Any element that intentionally occupies a role within a creative representation.**
+> **The canonical representation of intentional elements within the Creative Representation Layer.**
 
 **Status:** Accepted
 
@@ -8,66 +8,177 @@
 
 # Context
 
-Early iterations of the Creative Representation Layer used the term
-**Actor** to describe the primary elements within a creative work.
+Creative works are composed of intentional elements that contribute to
+meaning.
 
-However, "Actor" proved insufficient because it implied human or
-living subjects and did not naturally extend to products, vehicles,
-architecture, landscapes, or other non-living elements.
+These elements may be people, animals, products, vehicles, architecture,
+objects, environments, or entirely fictional creations.
 
-Alternative terms such as **Entity**, **Subject**, **Character**, and
-**Element** were considered.
+Traditional scene models often classify these elements according to their
+physical nature.
 
-While technically correct, these terms either originated from software
-engineering or failed to capture the narrative nature of creative work.
+VizClick instead models creativity.
 
-VizClick models creative intent rather than physical reality.
+Within a creative representation:
 
-In a creative representation:
+- a luxury watch can become the protagonist
+- a mountain can become the emotional focus
+- a forest can become a character
+- a crowd can become a single visual entity
+- a galaxy can become an intentional design element
 
-- a car can be the protagonist
-- a luxury watch can communicate prestige
-- a building can project authority
-- a tree can evoke loneliness
-- a coffee cup can become the central focus of a story
-
-The architecture therefore requires a concept that represents intentional
-creative roles rather than real-world classifications.
+The architecture therefore requires an abstraction based on creative
+purpose rather than physical classification.
 
 ---
 
 # Decision
 
-VizClick adopts **Actor** as the primary abstraction for every intentional
-element within the Creative Representation Layer.
+VizClick adopts **Actor** as the canonical representation of every
+intentional element within the Creative Representation Layer (CRL).
 
-An Actor is not defined by what it is.
+An Actor is an architectural abstraction.
 
-An Actor is defined by the role it plays within the creative work.
+It represents the creative role performed by an element rather than its
+physical identity.
 
-An Actor may represent:
+Actors are renderer-independent.
 
-- a person
-- an animal
-- a product
-- a vehicle
-- a building
-- an object
-- a landscape
-- a fictional creature
-- any other element capable of carrying creative meaning
+They never describe implementation details.
 
-Actors are renderer-independent and remain consistent regardless of the
-target rendering system.
+Instead, they describe creative intent that can later be translated by a
+Renderer Adapter.
+
+Every intentional element within VizClick is represented as an Actor.
+
+---
+
+# Actor Types
+
+Every Actor represents a single intentional element within a creative
+representation.
+
+Actors may represent individuals, collections, or procedurally generated
+elements while exposing the same architectural behavior.
+
+VizClick currently defines three Actor types.
+
+---
+
+## Individual Actor
+
+Represents a single intentional element.
+
+Examples include:
+
+- person
+- animal
+- product
+- vehicle
+- building
+- prop
+- tree
+
+Individual Actors describe one identifiable creative element.
+
+---
+
+## Collective Actor
+
+Represents multiple similar elements that behave as a single creative
+unit.
+
+Collective Actors avoid unnecessary duplication while preserving creative
+meaning.
+
+Examples include:
+
+- crowd
+- audience
+- flock
+- herd
+- school of fish
+- army
+- forest
+- swarm
+- field of flowers
+
+A Collective Actor is not a container of thousands of Actors.
+
+It represents the collective itself.
+
+Typical properties include:
+
+- population
+- density
+- distribution
+- variation
+- shared appearance
+- shared behavior
+- shared motion
+- shared intention
+
+Example:
+
+Audience
+
+Population: 12,000
+
+Density: High
+
+Attention: Stage
+
+Emotion: Excitement
+
+Motion: Rhythmic
+
+---
+
+## Procedural Actor
+
+Represents creative elements generated through rules rather than explicit
+instances.
+
+Examples include:
+
+- mountain range
+- galaxy
+- city skyline
+- cloud layer
+- star field
+- terrain
+- procedural vegetation
+- particle systems
+
+Procedural Actors describe generation rules rather than individual
+objects.
+
+Typical properties include:
+
+- generation method
+- scale
+- variation
+- randomness
+- repetition
+- distribution
 
 ---
 
 # Responsibilities
 
-An Actor represents the complete creative description of a single
+An Actor encapsulates the complete creative representation of one
 intentional element.
 
-An Actor may contain:
+Actors are one of the primary Creative Briefs represented within the
+Creative Representation Layer.
+
+Each Actor is composed from reusable Creative Concepts stored within the
+Creative Knowledge Ecology (CKE).
+
+Actors reference Creative Concepts rather than embedding renderer-specific
+descriptions.
+
+Depending on the creative domain, an Actor may include:
 
 - Concept
 - Properties
@@ -81,91 +192,141 @@ Not every Actor requires every component.
 
 For example:
 
-- a human may contain Performance and Pose
-- a luxury watch may contain Appearance and Expression
-- a mountain may only contain Appearance
+- a person may include Performance and Pose
+- a product may include Appearance
+- a mountain may only include Appearance
+- a flock may emphasize Motion
+- a galaxy may describe procedural generation
 
-The representation remains flexible while preserving a consistent
-architectural model.
+This flexibility allows one architectural model to support every creative
+domain.
 
 ---
 
 # Relationships
 
-Actors exist independently.
+Actors remain independent.
 
 Meaning emerges through Relationships.
 
-Relationships describe how Actors connect to one another.
+Relationships describe how Actors interact, influence one another, and
+contribute to the overall creative representation.
 
 Examples include:
 
-- social relationships
-- physical interactions
 - spatial relationships
-- visual relationships
+- physical interactions
+- emotional relationships
 - narrative relationships
+- visual composition
+- temporal relationships
+- symbolic relationships
 
-A "couple" is therefore not an Actor.
+Examples:
 
-It is two Human Actors connected by a Romantic Relationship.
+Singer
 
-Likewise:
+facing
 
-- a family
-- a sports team
-- a crowd
-- a wedding party
+Audience
 
-are represented through Actors and Relationships rather than standalone
-concepts.
+Wolf Pack
+
+surrounding
+
+Deer
+
+Watch
+
+resting on
+
+Marble Surface
+
+Actors never own Relationships.
+
+Relationships never own Actors.
+
+Both are composed together within the Creative Representation Layer.
 
 ---
 
 # Design Principles
 
-## Creative Role
+## Architectural Abstraction
 
-Actors represent creative roles rather than physical categories.
+Actor is an architectural abstraction.
 
-Their purpose is to express creative intent.
+It intentionally ignores physical classifications in favor of creative
+meaning.
+
+An Actor represents the creative role performed within a creative
+representation rather than the real-world identity of an element.
+
+---
+
+## Uniform Representation
+
+All Actor types expose the same architectural behavior.
+
+Regardless of whether an Actor represents a person, a crowd, or a
+procedurally generated galaxy, every Actor participates in the Creative
+Representation Layer through:
+
+- Creative Concepts
+- Relationships
+- Creative Briefs
+
+Renderer Adapters determine how each Actor type is realized for a
+specific rendering system.
+
+---
+
+## Knowledge Driven
+
+Actors are composed from reusable Creative Concepts defined within the
+Creative Knowledge Ecology.
+
+Creative Concepts remain immutable.
+
+Actors compose those concepts into meaningful creative representations.
 
 ---
 
 ## Renderer Independence
 
-Actors never contain renderer-specific syntax,
-prompt engineering, or optimization rules.
+Actors never contain:
 
-Those belong exclusively to Renderer Adapters.
+- prompt syntax
+- renderer parameters
+- keyword weighting
+- renderer optimizations
+
+These belong exclusively to Renderer Adapters.
 
 ---
 
 ## Composability
 
-Complex scenes emerge through combinations of multiple Actors and their
-Relationships rather than specialized object types.
+Complex creative works emerge through combinations of Actors connected by
+Relationships.
 
-This keeps the architecture simple while allowing unlimited complexity.
+Meaning grows through composition rather than inheritance.
 
 ---
 
 ## Extensibility
 
-The Actor abstraction supports every creative domain envisioned for
-VizClick, including:
+New Actor types may be introduced without modifying the architecture.
 
-- photography
-- cinema
-- illustration
-- animation
-- architecture
-- product visualization
-- game development
-- industrial design
-- future rendering systems
+Future examples may include:
 
-No architectural changes are required to support new creative domains.
+- Volumetric Actor
+- Simulation Actor
+- Temporal Actor
+- Composite Actor
+- Digital Twin Actor
+
+The Actor abstraction remains stable as VizClick evolves.
 
 ---
 
@@ -173,20 +334,23 @@ No architectural changes are required to support new creative domains.
 
 ## Positive
 
-- Renderer-independent representation
-- Unified abstraction across all creative media
-- Eliminates special-case object types
-- Simplifies scene composition
-- Enables expressive relationship modeling
-- Scales naturally to complex creative works
+- Unified representation across creative domains
+- Renderer independence
+- Reusable creative knowledge
+- Flexible composition
+- Scalable scene representation
+- Efficient handling of large collections
+- Support for procedural content
+- Future-proof architecture
 
 ## Trade-offs
 
 - Requires explicit Relationship modeling
-- Introduces an additional abstraction compared to simple object lists
+- Introduces additional architectural abstractions
+- Requires Creative Concept composition
 
 These trade-offs are accepted because they produce a more expressive,
-consistent, and future-proof representation of creativity.
+maintainable, and extensible representation of creative intent.
 
 ---
 
@@ -194,14 +358,25 @@ consistent, and future-proof representation of creativity.
 
 Actors are not defined by what they are.
 
-Actors are defined by the role they perform within the creative work.
+Actors are defined by the creative role they perform.
 
-Creativity assigns meaning.
+Creative Concepts provide reusable knowledge.
 
-The Actor carries that meaning.
+Actors compose that knowledge.
+
+Relationships create meaning.
+
+Renderer Adapters translate creative intent into renderer-specific
+implementations.
+
+Together they form a renderer-independent representation of creativity.
 
 ---
 
 # Guiding Principle
 
-> Everything can become an Actor when it serves the story.
+> Every intentional element is represented as an Actor.
+>
+> An Actor may represent an individual, a collective, or a procedural
+> construction, but it always represents creative intent rather than
+> implementation.
