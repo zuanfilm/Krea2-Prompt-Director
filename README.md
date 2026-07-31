@@ -8,9 +8,10 @@
     Preserve creative meaning.
          Realize it everywhere.
 
+         Created and maintained 
+         by **Zuan Carreño**
+
 ────────────────────────────────────────────
-**Author**
-Zuan Carreño
 
 **License**
 Apache License 2.0
