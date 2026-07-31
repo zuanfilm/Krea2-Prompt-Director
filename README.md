@@ -8,6 +8,8 @@
    Preserve creative meaning.
        Realize it everywhere.
 
+       by Zuan Carreño
+
 ────────────────────────────────────────────
 ---
 
