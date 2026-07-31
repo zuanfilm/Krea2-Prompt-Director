@@ -3,17 +3,20 @@
                 VIZCLICK
 
       A Creative Knowledge Ecology
-        for Visual Creation
+         for Visual Creation
 
-   Preserve creative meaning.
-       Realize it everywhere.
-
-       by Zuan Carreño
+    Preserve creative meaning.
+         Realize it everywhere.
 
 ────────────────────────────────────────────
----
+**Author**
+Zuan Carreño
 
-> **Status:** Active Research & Development
+**License**
+Apache License 2.0
+
+**Status**
+Active Research & Development
 >
 > VizClick is an open architecture for representing creative meaning independently of language, rendering technologies, and visualization systems.
 >
