@@ -94,6 +94,20 @@ A representation succeeds only when it can be faithfully reconstructed by indepe
 
 VizClick therefore optimizes every ontology for observable reality, rendering fidelity, and coherent visual representation.
 
+## Observable Knowledge
+
+Reality provides the observable vocabulary.
+
+Creativity composes that vocabulary into new realities.
+
+VizClick preserves canonical observable knowledge rather than prompts, interpretations, or implementation-specific instructions.
+
+The same observable vocabulary can faithfully represent the physical world while serving as the foundation for coherent fictional worlds, impossible environments, and future forms of creative expression.
+
+Reality provides the primitives.
+
+Creativity composes the worlds.
+
 ---
 
 # A Different Starting Point
@@ -281,6 +295,16 @@ Examples include:
 - observable motion
 
 This transformation allows Creative System Experts to communicate with rendering systems using coherent visual specifications rather than isolated semantic concepts.
+
+VizClick separates knowledge from execution.
+
+Observable knowledge remains stable and implementation-independent.
+
+Creative intent is composed from this knowledge through the Activation Network.
+
+Execution systems transform that intent into renderer-specific implementations without modifying the underlying knowledge.
+
+This separation allows the same creative representation to be reused across image generation, video generation, simulation, robotics, game engines, CAD systems, XR experiences, and future creative technologies.
 ---
 
 # A New Architectural Perspective
@@ -367,6 +391,13 @@ VizClick exists to preserve that meaning while allowing every present and future
 > **Creativity is an ecosystem, not a taxonomy.**
 
 ---
+The Creative Knowledge Ecology (CKE) is a structured collection of canonical Observable Knowledge Objects.
+
+Each Knowledge Object represents a deterministic observation of reality rather than a prompt, artistic interpretation, or renderer-specific instruction.
+
+Knowledge Objects preserve measurable relationships between observable entities such as anatomy, optics, geometry, materials, motion, lighting, spatial composition, and environmental behavior.
+
+The CKE therefore functions as a scientific knowledge representation for creative intelligence rather than a prompt library.
 
 ```mermaid
 graph TD
@@ -1109,6 +1140,11 @@ Creative System Experts absorb the complexity of individual systems.
 > **Knowledge becomes meaning before it becomes implementation.**
 
 ---
+The Visual Meaning Layer does not describe artistic styles.
+
+It represents relationships between observable entities.
+
+Creative meaning emerges from these observable relationships, allowing the same semantic representation to remain valid across different execution systems and future rendering technologies.
 
 ```mermaid
 flowchart LR
@@ -1482,6 +1518,11 @@ A Creative System Expert determines **how** that intent should be realized for a
 
 This separation allows VizClick to preserve creative meaning while embracing the unique characteristics of every creative system.
 
+The Production Brief is a Creative Intermediate Representation (Creative IR).
+
+It does not store prompts.
+
+It stores deterministic compositions of Observable Knowledge Objects that collectively describe the intended observable state to be reconstructed by an execution system.
 ---
 
 ## Why Experts?
@@ -1749,6 +1790,12 @@ flowchart LR
 
     Knowledge --> Meaning --> Brief --> Expert
 ```
+
+The Activation Network composes Observable Knowledge Objects into a deterministic creative representation.
+
+Canonical knowledge remains immutable.
+
+User intent, stylistic preferences, and renderer-specific adaptations are applied as transformations during compilation without modifying the underlying knowledge.
 
 The Creative Knowledge Ecology provides creative knowledge.
 
