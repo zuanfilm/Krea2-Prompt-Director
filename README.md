@@ -86,6 +86,13 @@ They will continue to exist long after today's rendering technologies have disap
 VizClick exists because **creative knowledge should outlive every technology used to express it.**
 
 Rather than teaching creators how to communicate with today's creative systems, VizClick seeks to enable future creative systems to understand the language creators have always spoken.
+VizClick exists to preserve creative meaning by transforming abstract creative concepts into coherent observable representations.
+
+Creative meaning alone is not sufficient.
+
+A representation succeeds only when it can be faithfully reconstructed by independent rendering systems.
+
+VizClick therefore optimizes every ontology for observable reality, rendering fidelity, and coherent visual representation.
 
 ---
 
@@ -254,6 +261,26 @@ VizClick concerns itself with neither end of this pipeline.
 
 Its responsibility is preserving the creative meaning that connects them.
 
+# Observable Representation
+
+Creative concepts are inherently abstract.
+
+Renderers, however, reconstruct observable reality.
+
+VizClick bridges these domains by transforming abstract creative meaning into coherent observable representations.
+
+Every ontology therefore describes what can be observed rather than what must be interpreted.
+
+Examples include:
+
+- observable facial geometry
+- observable lighting behavior
+- observable material response
+- observable spatial relationships
+- observable atmospheric effects
+- observable motion
+
+This transformation allows Creative System Experts to communicate with rendering systems using coherent visual specifications rather than isolated semantic concepts.
 ---
 
 # A New Architectural Perspective
@@ -717,7 +744,25 @@ VizClick therefore models creativity as an ecosystem rather than a static taxono
 ---
 
 > **Technology changes. Creative meaning endures.**
+# Engineering Principles
 
+VizClick engineering follows four fundamental principles.
+
+## Preserve Creative Meaning
+
+Creative concepts remain independent of renderers.
+
+## Observable Representation
+
+Abstract ideas are transformed into reconstructable visual states.
+
+## Representation Coherence
+
+Every observable property reinforces a single internally consistent representation.
+
+## Rendering Fidelity
+
+Every ontology descriptor exists to maximize the probability that a renderer reconstructs the intended visual result.
 # Chapter 3 — The Semantic Bridge
 
 > **Translation preserves words. Representation preserves meaning.**
