@@ -1,0 +1,175 @@
+# ADR-008 — Rendering Fidelity Principle
+
+**Status:** Accepted
+
+**Date:** 2026
+
+---
+
+# Context
+
+VizClick is a Creative Knowledge Ecology whose purpose is to preserve creative meaning independently of rendering technologies.
+
+Early development focused on representing creative knowledge through renderer-independent ontologies capable of describing actors, environments, lighting, composition, performance, and visual relationships.
+
+As the ontologies matured, an important realization emerged.
+
+The purpose of an ontology is not simply to represent knowledge.
+
+Its purpose is to maximize the probability that a rendering system reconstructs the intended visual representation.
+
+This distinction changes the optimization objective of the entire project.
+
+An ontology is successful not because it is linguistically elegant or scientifically exhaustive, but because it consistently produces the intended visual result across rendering systems.
+
+---
+
+# Decision
+
+VizClick shall optimize every ontology for **Rendering Fidelity**.
+
+Rendering Fidelity is defined as the probability that an independent rendering system reconstructs the intended visual representation from the information contained within a Production Brief.
+
+Every ontology should therefore maximize observable visual information while minimizing ambiguity and conflicting interpretations.
+
+---
+
+# Renderer-Oriented Representation
+
+Ontology descriptors should describe observable visual properties rather than abstract semantic concepts.
+
+Priority should always be given to information that directly influences visual reconstruction.
+
+Examples include:
+
+- Observable geometry
+- Observable appearance
+- Observable surface properties
+- Observable lighting behavior
+- Observable material response
+- Observable spatial relationships
+- Observable anatomical changes
+
+Whenever possible, descriptors should communicate visible consequences rather than abstract labels.
+
+---
+
+# Representation Coherence
+
+Visual realism emerges from coherent relationships between visual properties.
+
+Individual features should never be optimized independently if doing so introduces conflicting visual information.
+
+Every ontology contributes to a single internally consistent representation.
+
+The Representation Engine is responsible for preserving this coherence throughout synthesis.
+
+---
+
+# Renderer-Oriented Language
+
+Descriptors should use language that maximizes communication with rendering systems while remaining understandable to humans.
+
+Vocabulary should prioritize:
+
+- high-frequency visual concepts,
+- observable physical properties,
+- unambiguous spatial relationships,
+- visually reconstructable descriptions.
+
+Technical terminology may be used when it reinforces visual understanding, but should never reduce rendering fidelity.
+
+---
+
+# Observable Representation
+
+Ontology descriptors should describe only observable characteristics.
+
+Whenever possible they should answer:
+
+> What would be visible in the final rendered image?
+
+rather than:
+
+> What does this concept mean?
+
+Meaning belongs to Creative Concepts.
+
+Representation belongs to the ontologies.
+
+---
+
+# Validation
+
+Ontology quality is evaluated through renderer validation rather than linguistic evaluation.
+
+The primary validation question becomes:
+
+> Does this descriptor consistently increase the probability of reconstructing the intended visual representation?
+
+If the answer is yes, the ontology fulfills its purpose.
+
+---
+
+# Architectural Consequences
+
+This principle applies to every present and future ontology within VizClick.
+
+Including:
+
+- Actors
+- Performance
+- Emotion
+- Camera
+- Lighting
+- Composition
+- Materials
+- Motion
+- Environment
+- Weather
+- Relationships
+
+Future ontologies should optimize for rendering fidelity before descriptive sophistication.
+
+---
+
+# Relationship to Previous ADRs
+
+This ADR complements:
+
+- ADR-002 — Creative Representation Layer
+- ADR-003 — Creative Concept
+- ADR-006 — Visual Meaning Layer
+- ADR-007 — Activation Network
+
+Those ADRs define how creative meaning is represented.
+
+This ADR defines how those representations should be engineered to maximize successful reconstruction by rendering systems.
+
+---
+
+# Fundamental Principle
+
+> Preserve creative meaning while maximizing rendering fidelity.
+
+Creative meaning is preserved through representation.
+
+Rendering fidelity is achieved through coherent observable descriptions.
+
+Both objectives are equally necessary.
+
+A representation that cannot be faithfully reconstructed has failed its purpose.
+
+---
+
+# Long-Term Vision
+
+Rendering systems will continue to evolve.
+
+Prompt syntax, model architectures, and rendering technologies will change.
+
+The Rendering Fidelity Principle remains independent of any specific renderer.
+
+VizClick therefore optimizes for faithful visual reconstruction rather than for the characteristics of any individual AI model.
+
+This allows the Creative Knowledge Ecology to remain stable while Creative System Experts evolve to support future rendering technologies.
