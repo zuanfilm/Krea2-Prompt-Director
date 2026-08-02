@@ -1,24 +1,23 @@
-# Emotion Ontology
+# Emotion Expression Ontology
 
-> **A renderer-independent ontology describing observable facial expressions rather than psychological states.**
+> **A renderer-independent ontology describing observable facial anatomy that communicates emotional meaning.**
 
 ---
 
 ## Fundamental Directive
 
-The Emotion Ontology represents **only observable facial expression**.
+The Emotion Expression Ontology represents **only observable facial expression**.
 
 It never describes:
 
 - body posture
 - gesture
-- body movement
+- movement
 - camera
 - lighting
 - composition
 - narrative
-- rendering techniques
-- implementation details
+- renderer implementation
 
 Every entry must remain:
 
@@ -31,201 +30,93 @@ Every entry must remain:
 
 # Purpose
 
-The Emotion Ontology provides reusable Creative Knowledge describing how emotional states become visually recognizable through facial expression.
+The Emotion Expression Ontology describes how emotional meaning becomes visually recognizable through facial anatomy.
 
-Rather than defining what a subject feels internally, the ontology describes the observable facial characteristics that allow an observer to recognize that emotion.
+Rather than describing psychological states, the ontology documents the observable facial characteristics that allow an observer to recognize an emotion.
 
-This distinction allows the ontology to remain both renderer-independent and highly descriptive for current AI image generation systems.
-
----
-
-# Why This Ontology Exists
-
-During the development of the first reference implementation, **Krea Expert V1**, an important observation emerged.
-
-Current AI image generation systems do not consistently interpret abstract emotional labels such as:
-
-- joy
-- sadness
-- fear
-- anger
-- pride
-
-However, they respond far more consistently to detailed descriptions of observable facial anatomy.
-
-For example:
-
-Instead of:
-
-> Joy
-
-A renderer understands more reliably:
-
-> Cheeks elevate noticeably, gently compressing the lower eyelids while the corners of the mouth lift into a broad symmetrical smile...
-
-The Emotion Ontology therefore bridges creative intent with observable facial expression.
-
----
-
-# Scope
-
-The Emotion Ontology V1 is intentionally designed for **human and human-like facial expressions**.
-
-This decision reflects the goals of the first reference implementation, **Krea Expert V1**, whose primary creative domain consists of humans, portraits, fashion, advertising, cinema, and humanoid characters.
-
-The ontology therefore describes observable human facial anatomy, including features such as:
-
-- Eyebrows
-- Forehead
-- Eyelids
-- Eyes
-- Nose
-- Cheeks
-- Lips
-- Mouth Corners
-- Jaw
-- Chin
-- Facial Muscle Activation
-
-These anatomical references are not intended to imply that emotional expression is exclusive to human morphology.
-
-Instead, they provide a practical and highly descriptive foundation for current image generation systems, which demonstrate the strongest understanding of detailed human facial anatomy.
-
-Future versions of VizClick may introduce a **Universal Expression Ontology** that abstracts these concepts into species-independent facial regions, allowing the same Creative Meaning to be represented across robots, creatures, animals, stylized characters, and future digital actors.
-
-Possible future concepts include:
-
-- Upper Facial Region
-- Visual Organ Region
-- Mid Facial Region
-- Oral Region
-- Lower Facial Region
-- Surface Deformation
-- Expression Tension
-
-This evolution preserves the VizClick architecture while expanding the ontology beyond human anatomy.
-
-The Emotion Ontology V1 should therefore be understood as the **first reference implementation** rather than the final architectural destination.
-
----
-
-> **Design Principle**
->
-> VizClick validates architectural ideas through concrete reference implementations before generalizing them into universal representations.
-
----
-
-# The Representation Problem
+This approach provides a stable semantic representation while allowing each Creative System Expert to translate the same emotional meaning into the representation preferred by its destination renderer.
 
 ```mermaid
 flowchart LR
 
     Meaning["Creative Meaning"]
 
-    Emotion["Emotion"]
-
-    Face["Observable Facial Expression"]
+    Emotion["Emotion Expression Ontology"]
 
     Expert["Creative System Expert"]
 
     Renderer["Creative System"]
 
-    Meaning --> Emotion --> Face --> Expert --> Renderer
+    Meaning --> Emotion --> Expert --> Renderer
 ```
-
-Humans naturally communicate using abstract emotional concepts.
-
-Examples include:
-
-- joy
-- grief
-- fear
-- relief
-- determination
-
-Current AI renderers, however, synthesize visual results more reliably from observable facial characteristics than from abstract psychological terminology.
-
-The purpose of this ontology is therefore not to define emotions psychologically.
-
-Its purpose is to define how emotions become visually observable.
 
 ---
 
-# Domain Responsibility
+# Scope
 
-```mermaid
-flowchart LR
+Version 1 is intentionally designed for **human and human-like facial expressions**.
 
-    Emotion["Emotion"]
+This reflects the objectives of the first reference implementation, **Krea Expert V1**, whose primary creative domain consists of portraiture, fashion, advertising, cinema, and humanoid characters.
 
-    Pose["Pose"]
+The ontology therefore describes observable human facial anatomy while remaining architecturally independent from any specific renderer.
 
-    Performance["Performance"]
+Future versions may introduce a Universal Expression Ontology capable of representing non-human facial morphologies without changing the underlying Creative Meaning.
 
-    Dynamics["Dynamics"]
+---
 
-    Lighting["Lighting"]
+# Design Principles
 
-    Composition["Composition"]
+## Domain Purity
 
-    Emotion -. influences .-> Pose
-    Emotion -. influences .-> Performance
-    Emotion -. influences .-> Dynamics
+The Emotion Expression Ontology owns only facial expression.
 
-    Emotion -. no ownership .-> Lighting
-    Emotion -. no ownership .-> Composition
-```
-
-The Emotion Ontology owns only facial expression.
-
-It intentionally excludes:
+It never describes:
 
 - pose
-- body posture
+- body language
 - gesture
 - movement
-- camera
 - lighting
 - composition
-- narrative
+- camera
 
-Those responsibilities belong to independent ontologies.
+Those responsibilities belong to their respective ontologies.
 
-This separation allows ontology entries to be combined without semantic conflicts.
-
----
-
-# Domain Purity Principle
-
-Every ontology owns only the semantic properties assigned to its domain.
-
-Relationships may exist between domains.
-
-Descriptions must remain independent.
-
-Emotion influences Pose.
-
-Emotion influences Performance.
-
-Emotion influences Dynamics.
-
-Emotion never contains them.
+This separation allows multiple ontology entries to be combined without semantic conflicts.
 
 ---
 
-# Renderer Independence
+## Renderer Independence
 
-The Emotion Ontology never contains:
+The ontology never contains:
 
 - prompts
 - renderer syntax
-- FACS Action Units
+- software parameters
 - implementation details
-- software-specific terminology
+- FACS Action Units
 
 Instead, it describes only observable facial anatomy.
 
-Each Creative System Expert determines how those observations should be represented for a specific destination system.
+Renderer-specific representations are the responsibility of Creative System Experts.
+
+---
+
+## Visual Observability
+
+Every description must describe only characteristics that can be directly observed in an image.
+
+Invisible emotional or psychological interpretations are intentionally excluded.
+
+---
+
+## Expressive Coverage
+
+The objective of the ontology is **not** to catalog every human emotion.
+
+Its objective is to provide the smallest curated set of visually distinct facial expressions capable of covering the overwhelming majority of emotional performances encountered in photography, cinema, illustration, animation, and AI-assisted visual creation.
+
+Expressive coverage is prioritized over psychological completeness.
 
 ---
 
@@ -234,7 +125,7 @@ Each Creative System Expert determines how those observations should be represen
 ```mermaid
 flowchart TD
 
-    Emotion["Emotion"]
+    Emotion["Emotion Expression Ontology"]
 
     Primary["Category 1<br/>Primary Emotions"]
 
@@ -244,30 +135,43 @@ flowchart TD
     Emotion --> Compound
 ```
 
-The Emotion Ontology V1 consists of two categories.
-
 ## Category 1 — Primary Emotions
 
 Thirty carefully selected primary emotions.
 
-Each emotion contains two intensity levels:
+Each primary emotion contains two intensity levels.
 
 - Moderate
 - Expressive
 
 Total:
 
-30 × 2 = **60 entries**
+**30 × 2 = 60 entries**
+
+Primary emotions are selected because they:
+
+- possess a visually distinct facial configuration
+- are frequently used in professional acting
+- are easily recognized by observers
+- provide meaningful expressive coverage
+- support natural compound emotions
+
+Emotions that do not significantly expand expressive coverage should become compound emotions or future ontology extensions.
 
 ---
 
 ## Category 2 — Expressive Compound Emotions
 
-Approximately forty carefully curated compound emotions based on the most common emotional performances found in portraiture, cinema, photography, and acting.
+Approximately forty carefully curated emotional combinations.
+
+Each entry consists of:
+
+- one dominant primary emotion
+- one compatible secondary emotional modifier
 
 Only expressive variants are included.
 
-This decision maximizes visual clarity for current AI renderers.
+This maximizes visual clarity for current AI image generation systems while maintaining a compact ontology.
 
 Examples include:
 
@@ -278,21 +182,17 @@ Examples include:
 - Anger with Disgust
 - Sadness with Hope
 
-Total:
-
-Approximately **40 entries**
-
 ---
 
-# Official Entry Schema (V1)
+# Official Entry Schema
 
-Every entry follows the same anatomical order.
+Every ontology entry follows the same anatomical order to maximize consistency, readability, and future translation by Creative System Experts.
 
 ```text
 ============================================================================
 VIZCLICK ONTOLOGY
 
-Emotion Ontology
+Emotion Expression Ontology
 
 Category X
 
@@ -302,17 +202,19 @@ Entry ###
 
 Name
 
+Intensity
+
 Description:
 
 Eyebrows...
 
 Forehead...
 
-Upper eyelids...
+Upper Eyelids...
 
 Eyes...
 
-Lower eyelids...
+Lower Eyelids...
 
 Nose...
 
@@ -320,33 +222,39 @@ Cheeks...
 
 Lips...
 
-Mouth corners...
+Mouth Corners...
 
 Jaw...
 
 Chin...
 
-Overall facial muscle activation...
+Overall Facial Muscle Activation...
 ```
 
-Maintaining a consistent anatomical order improves readability, consistency, and future translation by Creative System Experts.
+Descriptions should remain anatomically consistent across the entire ontology.
+
+Every section should describe only observable facial characteristics.
 
 ---
 
 # Translation Through Creative System Experts
 
+The Emotion Expression Ontology remains stable.
+
+Only its representation changes.
+
 ```mermaid
 flowchart LR
 
-    Ontology["Emotion Ontology"]
+    Ontology["Emotion Expression Ontology"]
 
     Expert["Creative System Expert"]
 
-    Krea["Krea"]
+    Krea["Krea Expert"]
 
-    Nano["Nano Banana"]
+    Nano["Nano Banana Expert"]
 
-    Future["Future Systems"]
+    Future["Future Experts"]
 
     Ontology --> Expert
 
@@ -355,31 +263,26 @@ flowchart LR
     Expert --> Future
 ```
 
-The Emotion Ontology remains unchanged.
+Examples include:
 
-Only its representation changes.
+**Krea Expert**
 
-Examples:
+- Detailed anatomical facial descriptions optimized for Krea.
 
-Krea Expert
+**Nano Banana Expert**
 
-↓
+- Facial Action Coding System (FACS) Action Units.
 
-Detailed anatomical descriptions.
+**Future Experts**
 
-Nano Banana Expert
-
-↓
-
-FACS Action Units.
-
-Future Experts
-
-↓
-
-Renderer-specific representations.
+- Blendshape values
+- Facial rig controls
+- Animation parameters
+- Future renderer-specific representations
 
 The ontology itself never changes.
+
+Only its realization evolves.
 
 ---
 
@@ -392,11 +295,63 @@ Every descriptor should be written as if reviewed collaboratively by:
 - a portrait photographer
 - a facial animation supervisor
 
-Every sentence should answer a single question:
+Every description must satisfy the following requirements.
 
-> **Will this anatomical description help a renderer synthesize a more believable facial expression?**
+## Anatomical Accuracy
 
-If the answer is no, the description should be refined.
+Descriptions should reflect realistic facial anatomy and muscle behavior.
+
+---
+
+## Visual Observability
+
+Every sentence must describe characteristics that can be directly observed in an image.
+
+---
+
+## Semantic Precision
+
+Descriptions should be specific enough that the emotion can be recognized even if the emotion label itself is removed.
+
+The anatomical description carries the visual meaning.
+
+The emotion name serves only as semantic indexing.
+
+---
+
+## Consistency
+
+Every descriptor follows the same anatomical order.
+
+Consistency improves:
+
+- readability
+- ontology maintenance
+- renderer translation
+- future automation
+
+---
+
+## Expressive Quality
+
+Descriptors should be sufficiently detailed to maximize interpretation by current AI image generation systems while remaining completely renderer independent.
+
+---
+
+# Future Evolution
+
+Version 1 intentionally focuses on human and human-like facial expressions.
+
+Future versions may expand the ontology through:
+
+- Universal Expression Ontology
+- Species-independent facial regions
+- Non-human morphologies
+- Creature expressions
+- Robotic expressions
+- Stylized characters
+
+These future extensions should preserve the existing semantic architecture while expanding the range of supported visual actors.
 
 ---
 
@@ -404,4 +359,14 @@ If the answer is no, the description should be refined.
 
 > **An emotion is not what the subject feels.**
 >
-> **An emotion is the visible facial evidence that allows an observer to recognize what the subject feels.**
+> **An emotion is the observable facial evidence that allows an observer to recognize what the subject feels.**
+
+---
+
+# Final Principle
+
+The Emotion Expression Ontology is not intended to describe every possible emotion.
+
+Its purpose is to provide a compact, reusable, renderer-independent library of visually distinct facial expressions that collectively cover the overwhelming majority of emotional performances used in visual storytelling.
+
+By separating **Creative Meaning** from **renderer-specific implementation**, the ontology enables the same emotional intent to be realized consistently across present and future Creative Systems.
