@@ -24,6 +24,113 @@ Active Research & Development
 > This document describes the philosophy, architecture, and guiding principles behind the project.
 
 ---
+# Visual Knowledge Architecture
+
+VizClick is a **Creative Knowledge Ecology (CKE)** for representing observable visual reality.
+
+Rather than generating prompts, VizClick represents knowledge through deterministic, composable ontologies. This knowledge is transformed into Creative Intent and reconstructed by specialized adapters for AI image generation, AI video generation, 3D applications, game engines, and future visual technologies.
+
+```text
+                                   OBSERVABLE REALITY
+                                            │
+                          Observe • Classify • Abstract
+                                            │
+                                            ▼
+                         Creative Knowledge Ecology (CKE)
+                                            │
+        ┌──────────────┬──────────────┬──────────────┬──────────────┐
+        │              │              │              │              │
+        │   Subject    │     Pose     │ Performance  │   Lighting   │
+        │              │              │              │              │
+        ├──────────────┼──────────────┼──────────────┼──────────────┤
+        │              │              │              │              │
+        │    Camera    │ Composition  │    Motion    │  Materials   │
+        │              │              │              │              │
+        ├──────────────┼──────────────┼──────────────┼──────────────┤
+        │              │              │              │              │
+        │ Environment  │   Weather    │    Color     │ Interaction  │
+        │              │              │              │              │
+        └──────────────┴──────────────┴──────────────┴──────────────┘
+                                            │
+                                            ▼
+                                Activation Network
+                                            │
+                                            ▼
+                               Creative Intent Graph
+                                            │
+                                            ▼
+                                 VizClick Compiler
+                                            │
+      ┌─────────────────────────┬──────────────────────────┬──────────────────────────┐
+      │                         │                          │                          │
+      ▼                         ▼                          ▼                          ▼
+Canonical Expansion     Knowledge Interpreter      Renderer Optimizer      Compiler Rules
+                              │
+      ┌───────────────────────┴────────────────────────────────────────────────────────┐
+      │                                                                                │
+      ▼                                                                                ▼
+ Locale Interpreter                                                         Domain Interpreter
+
+ EN • ES • PT • FR • DE                                             Photography • Cinema
+ IT • JA • ZH • AR • HI                                              Animation • Fashion
+                                                                      Architecture • Product
+                                                                      Medical • Scientific
+                                                                      Future Domains
+      └───────────────────────┬────────────────────────────────────────────────────────┘
+                              │
+                              ▼
+                    Reality Reconstruction Adapters
+                              │
+ ┌────────────────┬────────────────┬────────────────┬────────────────┬────────────────┐
+ │                │                │                │                │                │
+ │   AI Images    │    AI Video    │   3D & DCC     │ Game Engines   │ Future Systems │
+ │                │                │                │                │                │
+ │ • Krea         │ • Hailuo AI    │ • Blender      │ • Unreal       │ • Robotics     │
+ │ • FLUX         │ • Kling        │ • Maya         │ • Unity        │ • CAD          │
+ │ • Midjourney   │ • Seedance     │ • Houdini      │ • Godot        │ • Simulation   │
+ │ • SDXL         │ • Veo          │ • Cinema 4D    │ • UEFN         │ • Digital Twin │
+ │ • Seedream     │ • Runway       │ • OpenUSD      │ • Roblox       │ • XR / VR / AR │
+ │ • Imagen       │ • Pika         │ • Omniverse    │                │ • Future AI    │
+ │ • Ideogram     │ • Luma         │ • FreeCAD      │                │                │
+ │ • Qwen Image   │                │                │                │                │
+ └────────────────┴────────────────┴────────────────┴────────────────┴────────────────┘
+                                            │
+                                            ▼
+                            Observable Reconstruction
+                                            │
+                                            ▼
+                                Scene Inspector (VLM)
+                                            │
+                                            ▼
+                           Observable Analysis Report
+                                            │
+                                            ▼
+                         Human Validation / Research Loop
+                                            │
+                                            ▼
+                         Creative Knowledge Ecology (CKE)
+```
+
+## Fundamental Principles
+
+- Every Knowledge Object represents exactly one observable reality.
+- Every ontology answers exactly one governing question.
+- Ontologies remain independent and composable.
+- Knowledge is immutable; transformations belong to the compiler.
+- The Knowledge Interpreter translates canonical knowledge into linguistic and domain-specific representations.
+- The Renderer Optimizer adapts those representations for each reconstruction technology.
+- Reconstruction is analyzed, validated, and used to refine the Creative Knowledge Ecology through an empirical research loop.
+
+> **VizClick does not teach machines how to generate images.**
+>
+> **VizClick teaches machines how to represent observable visual reality.**
+
+**Knowledge is independent.**
+
+**Reconstruction technologies are replaceable.**
+
+**Observable reality is the reference.**
+
 
 # VizClick
 
